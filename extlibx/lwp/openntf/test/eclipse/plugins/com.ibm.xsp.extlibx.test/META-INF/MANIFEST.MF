@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ExtlibX Test
+Bundle-SymbolicName: com.ibm.xsp.extlibx.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: IBM
+Require-Bundle: org.junit,
+ com.ibm.designer.runtime,
+ com.ibm.domino.napi,
+ com.ibm.domino.services,
+ com.ibm.xsp.core,
+ com.ibm.xsp.extsn,
+ com.ibm.xsp.designer,
+ com.ibm.xsp.domino,
+ com.ibm.xsp.rcp,
+ com.ibm.xsp.extlib,
+ com.ibm.xsp.extlibx,
+ com.ibm.xsp.test.framework,
+ com.ibm.icu,
+ com.ibm.xsp.extlib.test;bundle-version="1.0.0",
+ com.ibm.commons.vfs;bundle-version="9.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
