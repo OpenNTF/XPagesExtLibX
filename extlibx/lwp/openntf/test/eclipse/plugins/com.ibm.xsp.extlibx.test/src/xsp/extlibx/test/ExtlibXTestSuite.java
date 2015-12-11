@@ -31,13 +31,14 @@ import xsp.extlibx.test.page.translator.ExtlibXGeneratePagesTest;
 import xsp.extlibx.test.registry.ExtlibXBooleanPropertyDefaultTest;
 import xsp.extlibx.test.registry.ExtlibXNamingConventionErrorTest;
 import xsp.extlibx.test.registry.ExtlibXNamingConventionTest;
+import xsp.extlibx.test.render.Bootstrap4RenderThemeControlTest;
 import xsp.extlibx.test.render.ExtlibXRenderThemeControlTest;
 import xsp.extlibx.test.serialize.ExtlibXViewSerializeTest;
 import xsp.extlibx.test.setup.ExtlibXSuiteSetupTest;
 
 import com.ibm.xsp.test.framework.SampleTestSuite;
 import com.ibm.xsp.test.framework.TestClassList;
-import com.ibm.xsp.test.framework.lifecycle.RegisteredDecodeTest;
+import com.ibm.xsp.test.framework.lifecycle.BaseRegisteredDecodeTest;
 import com.ibm.xsp.test.framework.registry.BaseComplexCheckTest;
 import com.ibm.xsp.test.framework.registry.BaseComplexNotRunTimeBindingTest;
 import com.ibm.xsp.test.framework.registry.BaseComponentRendererTest;
@@ -101,7 +102,7 @@ public class ExtlibXTestSuite extends TestSuite {
     /**
      * See {@link ExtlibXSuiteSetupTest} and {@link SampleTestSuite}.
      */
-    public static final long BASED_ON_SAMPLE_SUITE_VERSION = 41;
+    public static final long BASED_ON_SAMPLE_SUITE_VERSION = 42;
     
     public static List<Class<?>> getTestClassList() { 
         TestClassList suite = new TestClassList();
@@ -122,7 +123,7 @@ public class ExtlibXTestSuite extends TestSuite {
         
         // .lifecycle tests
         // - RegisteredDecodeTest
-        suite.addTestSuite(RegisteredDecodeTest.class);
+        suite.addTestSuite(BaseRegisteredDecodeTest.class);
         
         // .registry
         // - BaseBooleanPropertyDefaultTest
@@ -237,6 +238,7 @@ public class ExtlibXTestSuite extends TestSuite {
         suite.addTestSuite(BaseRenderPageTest.class);
         // - BaseRenderThemeControlTest
         suite.addTestSuite(ExtlibXRenderThemeControlTest.class);
+        suite.addTestSuite(Bootstrap4RenderThemeControlTest.class);
         // - BaseRenderTitleTest
         suite.addTestSuite(BaseRenderTitleTest.class);
         

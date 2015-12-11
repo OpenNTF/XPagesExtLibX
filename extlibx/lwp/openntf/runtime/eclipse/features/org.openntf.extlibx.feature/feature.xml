@@ -1,25 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- ******************************************************************* -->
-<!--                                                                     -->
-<!-- © Copyright IBM Corp. 2010, 2014                                    -->
-<!--                                                                     -->
-<!-- Licensed under the Apache License, Version 2.0 (the "License");     -->
-<!-- you may not use this file except in compliance with the License.    -->
-<!-- You may obtain a copy of the License at:                            -->
-<!--                                                                     -->
-<!-- http://www.apache.org/licenses/LICENSE-2.0                          -->
-<!--                                                                     -->
-<!-- Unless required by applicable law or agreed to in writing, software -->
-<!-- distributed under the License is distributed on an "AS IS" BASIS,   -->
-<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or     -->
-<!-- implied. See the License for the specific language governing        -->
-<!-- permissions and limitations under the License.                      -->
-<!--                                                                     -->
-<!-- ******************************************************************* -->
 <feature
       id="org.openntf.extlibx.feature"
       label="Extended Components Library for XPages Extension Feature"
-      version="9.0.1.v00_10_qualifier"
+      version="9.0.1.v00_15_qualifier"
       provider-name="IBM">
 
    <description url="http://extlib.openntf.org">
@@ -250,6 +234,13 @@
 
    <plugin
          id="com.ibm.xsp.extlibx.controls"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.ibm.xsp.extlibx.theme.bootstrap4"
          download-size="0"
          install-size="0"
          version="0.0.0"

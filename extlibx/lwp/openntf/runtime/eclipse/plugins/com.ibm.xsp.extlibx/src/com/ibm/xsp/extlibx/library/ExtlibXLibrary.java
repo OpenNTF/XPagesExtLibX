@@ -22,6 +22,7 @@ import java.util.List;
 import com.ibm.xsp.extlib.config.ExtlibPluginConfig;
 import com.ibm.xsp.extlibx.controls.config.ControlsXConfig;
 import com.ibm.xsp.library.AbstractXspLibrary;
+import com.ibm.xsp.extlibx.theme.bootstrap4.config.Bootstrap4Config;
 
 /**
  *
@@ -84,6 +85,7 @@ public class ExtlibXLibrary extends AbstractXspLibrary {
     	if(plugins==null) {
     		List<ExtlibPluginConfig> _plugins = new ArrayList<ExtlibPluginConfig>();
     		_plugins.add(new ControlsXConfig());
+            _plugins.add(new Bootstrap4Config());
             plugins = _plugins;
     	}
 		return plugins;

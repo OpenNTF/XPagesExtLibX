@@ -2,12 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Extended Components Library for XPages Extension
 Bundle-SymbolicName: com.ibm.xsp.extlibx;singleton:=true
-Bundle-Version: 9.0.1.v00_10_qualifier
+Bundle-Version: 9.0.1.v00_15_qualifier
 Bundle-Vendor: IBM
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.ibm.commons,
  com.ibm.xsp.core,
  com.ibm.xsp.extlib,
  com.ibm.xsp.extlibx.core;visibility:=reexport,
- com.ibm.xsp.extlibx.controls;visibility:=reexport
+ com.ibm.xsp.extlibx.controls;visibility:=reexport,
+ com.ibm.xsp.extlibx.theme.bootstrap4;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
