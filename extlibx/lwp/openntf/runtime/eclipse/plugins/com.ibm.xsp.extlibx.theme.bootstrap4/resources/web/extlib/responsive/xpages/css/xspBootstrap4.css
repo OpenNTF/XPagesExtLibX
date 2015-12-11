@@ -1,0 +1,1017 @@
+/** Bootstrap 4 specific XSP CSS tweaks/fixes **/
+
+/** Base HTML styles **/
+/** Override these to change default base styles. **/
+
+/** Caution: Changing this font size will change the size
+ of many CSS values. This is because Bootstrap4 uses 'rem'
+ units (relative em). This allows upscaling/downscaling
+ purely by changing the root font size.
+ 
+ TODO Is this addition necessary, as it is already set in Bootstrap's css?
+**/
+
+/** End Base HTML & body styles **/
+html {
+	font-size: 16px;
+}
+
+body.xsp{
+	color: #373a3c;
+	background-color: #fff;
+	margin: 0;
+}
+body.xsp, body.xsp li {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/** Button styles **/
+.btn + .btn {
+	margin-left: 0.5rem;
+}
+
+/** Navbar styles **/
+.xspNavItem {
+	padding: .425rem 0rem;
+}
+.xspNavbarContent .xspNavItem > * {
+	padding: 0rem;
+}
+.xspNavbarContent .nav-item:nth-of-type(1){
+	margin-left: 1rem;
+}
+
+/** Application Layout styles**/
+.applayout-content {
+	padding: 0.5rem;
+}
+.applayout-column-left {
+	padding: 0.5rem;
+}
+.applayout-column-right {
+	padding: 0.5rem;
+}
+
+.applayout-searchbar{
+	margin: 0 0.5rem;
+}
+.applayout-titlebar .applayout-searchbar{
+	margin-top: -2px;
+}
+.applayout-searchbar .applayout-searchbtn{
+	min-height: 2.35rem;
+}
+.applayout-search-options{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+/*.applayout-searchbtn{
+	padding: 0.625rem 1rem;
+}*/
+.applayout-searchbar .input-group .input-group-btn .applayout-search-options{
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+
+.xsp .navbar.applayout-placebar {
+	z-index: 994;
+	border-bottom: 1px solid #DDDDDD;
+}
+.applayout-placebar .applayout-placebar-title h4{
+	margin-bottom: 0;
+	padding-top: 0.25rem;
+}
+.applayout-placebar-actions {
+	margin-bottom: 0;
+}
+
+.applayout-titlebar .applayout-titlebar-name{
+	padding-top: .25rem;
+	margin-bottom: 0;
+}
+.applayout-main .navbar.applayout-titlebar {
+	z-index: 995;
+}
+/*.applayout-titlebar-inner ul:nth-child(2) > li {
+	margin-left: 0.75rem;
+}
+.applayout-titlebar-inner h4:nth-child(2) {
+	margin-left: 0.75rem;
+}*/
+
+.applayout-footer {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.applayout-footer .applayout-footerlinks{
+}
+.applayout-footer .applayout-footerlinks > li{
+	display: inline-block;
+	vertical-align: top;
+}
+.applayout-footer .applayout-footerlinks .nav-item{
+	float: none;
+}
+.applayout-footer .applayout-footerlinks ul{
+	padding-left: 0;
+}
+
+/** Dashboard Styles **/
+.row.xspDashboard {
+	margin: 0.5rem 0;
+}
+.xspDashboard > h2 {
+	margin: 0 0 0.5rem 0;
+}
+.xspDash {
+	text-align: center;
+	align-content: center;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.xspDash .xspDashTitle{
+	margin-bottom: 0;
+}
+.xspDash .glyphicon{
+	font-size: 7rem;
+}
+.xspDash .dashBadge {
+	margin-left: 0.425rem;
+	top: -2px;
+	position: relative;
+}
+.xspDash .xspNodeDescription {
+	display: block;
+}
+
+.xspDash .glyphicon {
+	margin-bottom: 0.5rem;
+}
+
+/** Navigator styles **/
+.xspNavigator .nav-item .nav-link:hover, .xspNavigator .nav-item .nav-link:focus {
+	background-color: #eee;
+}
+.xspNavigator .nav-item .nav-link.active:hover, .xspNavigator .nav-item .nav-link.active:focus {
+	background-color: #0275d8;
+}
+.xspNavigator.nav-pills.nav-stacked hr {
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+.navigator-twisty.glyphicon-plus-sign,
+.navigator-twisty.glyphicon-minus-sign {
+	margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+	padding: 2px 0px;
+	color: #0275d8;
+	float: left;
+}
+.nav.nav-pills > li > a {
+	padding-left: 1.25rem;
+}
+.nav.nav-pills li > .nav.nav-pills {
+	padding-left: 1.25rem;
+}
+.nav.xspNavigator li .xspSection{
+	padding: .5rem 1rem .5rem 0;
+	display: block;
+	text-decoration:none;
+	border-radius: 0.25rem;
+}
+.nav.xspNavigator li .xspSection:hover {
+	background-color: #eee;
+}
+
+/* Simple App Layout sidebar */
+.sidebar {
+	background-color: #F5F5F5;
+	border-right: 1px solid #EEEEEE;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 1rem 0.5rem;
+	z-index: 996;
+	position: relative;
+}
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed;
+		left: 0;
+	}
+}
+@media (max-width: 768px) {
+  .sidebar {
+	border-bottom: 1px solid #dddddd;
+	top:0;
+  }
+}
+
+/* Data View styles */
+.table.dataview .glyphicon-plus-sign,
+.table.dataview .glyphicon-minus-sign{
+	position: relative;
+	top: 2px;
+	font-size: 1rem;
+	color: #0275d8;
+}
+.dataview td .glyphicon {
+	top: -1px;
+}
+.table.dataview td, .table.dataview th {
+	padding: 0.5rem;
+}
+.dataview .glyphicon-file{
+	position: relative;
+	left: 0.5rem;
+	font-size: 1rem;
+	top: 0;
+	color: #0275d8;
+}
+.table.dataview thead th {
+	vertical-align: middle;
+}
+/*.table.dataview .xspDataViewSummary{
+	padding-top: 2px;
+}*/
+div.glyphicon.xspReadIcon{
+	color: #dddddd;
+}
+.table.dataview [class*="glyphicon-sort"],
+.forumView [class*="glyphicon-sort"]{
+	display: inline;
+	padding: 0 0.5rem;
+	color: #0275d8;
+}
+
+/** Use glyphicons in dojo checkbox and dojo radio button **/
+.xsp.dbootstrap .dijitCheckBox.dijitCheckBoxChecked:before{
+	content: "\e013";
+	font-family: "Glyphicons Halflings";
+	font-size: 9px;
+	left: 1px;
+	position: relative;
+	color: #0275d8;
+}
+
+/** dojo radio button **/
+.xsp.dbootstrap .dijitRadio.dijitRadioChecked:before {
+	content: "\2022";
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 34px;
+	line-height: 14px;
+	text-align: center;
+}
+.xsp.dbootstrap tr.dijitMenuItem td:last-child {
+	padding-right: 10px;
+}
+.xsp.dbootstrap .dijitTitlePane .dijitArrowNode {
+	margin-right: 15px;
+}
+.xsp.dbootstrap .dijitMenuArrowCell .dijitMenuExpand:before,
+.xsp.dbootstrap .dijitTitlePane .dijitClosed .dijitArrowNode:before {
+	font-family: "Glyphicons Halflings";
+	content: "\e080";
+	font-size: 12px;
+	padding-left: 10px;
+	position: relative;
+	top: -1px;
+	color: #0275d8;
+}
+.xsp.dbootstrap .dijitMenuArrowCell .dijitMenuCollapse:before,
+.xsp.dbootstrap .dijitTitlePane .dijitOpen .dijitArrowNode:before {
+	font-family: "Glyphicons Halflings";
+	content: "\e114";
+	font-size: 12px;
+	padding-left: 10px;
+	position: relative;
+	top: -1px;
+	color: #0275d8;
+}
+.xsp.dbootstrap .dijitInputContainer {
+	padding: 4px;
+}
+
+.xsp .dijitIcon:before, .xsp.dbootstrap .dijitMenuArrowCell .dijitMenuExpand:before, 
+.xsp.dbootstrap .dijitTabStripIcon:before, .xsp.dbootstrap .dijitArrowButtonInner:before, 
+.xsp.dbootstrap .dijitCheckBox:before, .xsp.dbootstrap .dijitRadio:before, 
+.xsp.dbootstrap .dijitCalendarIncrementControl:before, .xsp.dbootstrap .dijitTreeExpando:before, 
+.xsp.dbootstrap .dijitTitlePane .dijitArrowNode:before, .xsp.dbootstrap .dgrid-sort-arrow:before {
+	font-family: "Glyphicons Halflings";
+	color: #0275d8;
+}
+.xsp .icon-arrow-left:before {
+	font-family: "Glyphicons Halflings";
+	color: #0275d8;
+}
+
+.xsp .icon-arrow-right:before{
+	content: "\e080";
+	font-family: "Glyphicons Halflings";
+	color: #0275d8;
+}
+
+/* Hide the text icons on arrow buttons*/
+.dbootstrap .dijitTabContainer .dijitTabController .dijitTab.tabStripButton .dijitTabStripSlideLeftIcon,
+.dbootstrap .dijitTabContainer .dijitTabController .dijitTab.tabStripButton .dijitTabStripMenuIcon,
+.dbootstrap .dijitTabContainer .dijitTabController .dijitTab.tabStripButton .dijitTabStripSlideRightIcon {
+	display:none;
+}
+.xsp.dbootstrap .dijitDownArrowButton .dijitArrowButtonInner:before,
+.xsp.dbootstrap .dijitUpArrowButton .dijitArrowButtonInner:before {
+	font-family: "Glyphicons Halflings";
+	font-size: 0.75rem;
+	color: #0275d8;
+	padding-top: 1px;
+}
+.xsp.dbootstrap .dijitDownArrowButton .dijitArrowButtonInner:before {
+	content: "\e114";
+	padding-left: 0px;
+}
+.xsp.dbootstrap .dijitUpArrowButton .dijitArrowButtonInner:before {
+	content: "\e113";
+	padding-left: 2px;
+}
+.xsp.dbootstrap .dijitActive .dijitUpArrowButtonActive .dijitArrowButtonInner:before{
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #888888;
+}
+.xsp.dbootstrap .dijitActive .dijitDownArrowButtonActive .dijitArrowButtonInner:before {
+	border-color:  #888888 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)
+}
+
+/** Form Table - Need to switch to div based form table 
+instead of table based. These styles may need to be
+re-worked if/when that switch happens **/
+/*.form-table .form-title h2 {
+	line-height: 30px;
+	margin-bottom: 12px;
+	margin-top:-20px;
+} */
+.form-table {
+	width: 100%;
+}
+.xspFormTableContainer {
+	padding-top: 0;
+}
+.xspFormTableContainer .control-label label{
+	font-weight: bold;
+}
+.xspFormTableContainer .xspFormTableRowData {
+	padding: 0.5rem 1rem;
+}
+.xspFormTableContainer .form-table .control-label{
+	padding-left: 0.5rem;
+}
+.xspFormTableContainer .form-table .control-label > label{
+	margin-bottom: 0;
+}
+.xspFormTableContainer .form-table .form-title .lotusMeta{
+	font-size: 1rem;
+}
+/*.form-table .alert{
+	margin-top: -20px;
+}
+.form-table .alert .text-error {
+	font-weight: bold;
+	margin-left: -10px;
+}*/
+.has-error .text-error {
+	color: #A94442;
+}
+
+/***********************************************************************	
+	OneUI like specific styles used by XPages controls
+	-> Ideally, these classes should be renamed and the renderer adapted
+	   to the new names.
+***********************************************************************/
+
+/* Common utilities coming from OneUI */
+.lotusAltText {
+	display: none;
+}
+
+/************ GLYPHICONS ***************/
+/** Glyphicon references for Bootstrap4 
+	as the resources are contained in 
+	Bootstrap3
+**/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.eot');
+  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-asterisk:before {
+  content: "\2a";
+}
+.glyphicon-plus:before {
+  content: "\2b";
+}
+.glyphicon-euro:before {
+  content: "\20ac";
+}
+.glyphicon-minus:before {
+  content: "\2212";
+}
+.glyphicon-cloud:before {
+  content: "\2601";
+}
+.glyphicon-envelope:before {
+  content: "\2709";
+}
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+.glyphicon-glass:before {
+  content: "\e001";
+}
+.glyphicon-music:before {
+  content: "\e002";
+}
+.glyphicon-search:before {
+  content: "\e003";
+}
+.glyphicon-heart:before {
+  content: "\e005";
+}
+.glyphicon-star:before {
+  content: "\e006";
+}
+.glyphicon-star-empty:before {
+  content: "\e007";
+}
+.glyphicon-user:before {
+  content: "\e008";
+}
+.glyphicon-film:before {
+  content: "\e009";
+}
+.glyphicon-th-large:before {
+  content: "\e010";
+}
+.glyphicon-th:before {
+  content: "\e011";
+}
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+.glyphicon-ok:before {
+  content: "\e013";
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+.glyphicon-zoom-in:before {
+  content: "\e015";
+}
+.glyphicon-zoom-out:before {
+  content: "\e016";
+}
+.glyphicon-off:before {
+  content: "\e017";
+}
+.glyphicon-signal:before {
+  content: "\e018";
+}
+.glyphicon-cog:before {
+  content: "\e019";
+}
+.glyphicon-trash:before {
+  content: "\e020";
+}
+.glyphicon-home:before {
+  content: "\e021";
+}
+.glyphicon-file:before {
+  content: "\e022";
+}
+.glyphicon-time:before {
+  content: "\e023";
+}
+.glyphicon-road:before {
+  content: "\e024";
+}
+.glyphicon-download-alt:before {
+  content: "\e025";
+}
+.glyphicon-download:before {
+  content: "\e026";
+}
+.glyphicon-upload:before {
+  content: "\e027";
+}
+.glyphicon-inbox:before {
+  content: "\e028";
+}
+.glyphicon-play-circle:before {
+  content: "\e029";
+}
+.glyphicon-repeat:before {
+  content: "\e030";
+}
+.glyphicon-refresh:before {
+  content: "\e031";
+}
+.glyphicon-list-alt:before {
+  content: "\e032";
+}
+.glyphicon-lock:before {
+  content: "\e033";
+}
+.glyphicon-flag:before {
+  content: "\e034";
+}
+.glyphicon-headphones:before {
+  content: "\e035";
+}
+.glyphicon-volume-off:before {
+  content: "\e036";
+}
+.glyphicon-volume-down:before {
+  content: "\e037";
+}
+.glyphicon-volume-up:before {
+  content: "\e038";
+}
+.glyphicon-qrcode:before {
+  content: "\e039";
+}
+.glyphicon-barcode:before {
+  content: "\e040";
+}
+.glyphicon-tag:before {
+  content: "\e041";
+}
+.glyphicon-tags:before {
+  content: "\e042";
+}
+.glyphicon-book:before {
+  content: "\e043";
+}
+.glyphicon-bookmark:before {
+  content: "\e044";
+}
+.glyphicon-print:before {
+  content: "\e045";
+}
+.glyphicon-camera:before {
+  content: "\e046";
+}
+.glyphicon-font:before {
+  content: "\e047";
+}
+.glyphicon-bold:before {
+  content: "\e048";
+}
+.glyphicon-italic:before {
+  content: "\e049";
+}
+.glyphicon-text-height:before {
+  content: "\e050";
+}
+.glyphicon-text-width:before {
+  content: "\e051";
+}
+.glyphicon-align-left:before {
+  content: "\e052";
+}
+.glyphicon-align-center:before {
+  content: "\e053";
+}
+.glyphicon-align-right:before {
+  content: "\e054";
+}
+.glyphicon-align-justify:before {
+  content: "\e055";
+}
+.glyphicon-list:before {
+  content: "\e056";
+}
+.glyphicon-indent-left:before {
+  content: "\e057";
+}
+.glyphicon-indent-right:before {
+  content: "\e058";
+}
+.glyphicon-facetime-video:before {
+  content: "\e059";
+}
+.glyphicon-picture:before {
+  content: "\e060";
+}
+.glyphicon-map-marker:before {
+  content: "\e062";
+}
+.glyphicon-adjust:before {
+  content: "\e063";
+}
+.glyphicon-tint:before {
+  content: "\e064";
+}
+.glyphicon-edit:before {
+  content: "\e065";
+}
+.glyphicon-share:before {
+  content: "\e066";
+}
+.glyphicon-check:before {
+  content: "\e067";
+}
+.glyphicon-move:before {
+  content: "\e068";
+}
+.glyphicon-step-backward:before {
+  content: "\e069";
+}
+.glyphicon-fast-backward:before {
+  content: "\e070";
+}
+.glyphicon-backward:before {
+  content: "\e071";
+}
+.glyphicon-play:before {
+  content: "\e072";
+}
+.glyphicon-pause:before {
+  content: "\e073";
+}
+.glyphicon-stop:before {
+  content: "\e074";
+}
+.glyphicon-forward:before {
+  content: "\e075";
+}
+.glyphicon-fast-forward:before {
+  content: "\e076";
+}
+.glyphicon-step-forward:before {
+  content: "\e077";
+}
+.glyphicon-eject:before {
+  content: "\e078";
+}
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+.glyphicon-minus-sign:before {
+  content: "\e082";
+}
+.glyphicon-remove-sign:before {
+  content: "\e083";
+}
+.glyphicon-ok-sign:before {
+  content: "\e084";
+}
+.glyphicon-question-sign:before {
+  content: "\e085";
+}
+.glyphicon-info-sign:before {
+  content: "\e086";
+}
+.glyphicon-screenshot:before {
+  content: "\e087";
+}
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+.glyphicon-ok-circle:before {
+  content: "\e089";
+}
+.glyphicon-ban-circle:before {
+  content: "\e090";
+}
+.glyphicon-arrow-left:before {
+  content: "\e091";
+}
+.glyphicon-arrow-right:before {
+  content: "\e092";
+}
+.glyphicon-arrow-up:before {
+  content: "\e093";
+}
+.glyphicon-arrow-down:before {
+  content: "\e094";
+}
+.glyphicon-share-alt:before {
+  content: "\e095";
+}
+.glyphicon-resize-full:before {
+  content: "\e096";
+}
+.glyphicon-resize-small:before {
+  content: "\e097";
+}
+.glyphicon-exclamation-sign:before {
+  content: "\e101";
+}
+.glyphicon-gift:before {
+  content: "\e102";
+}
+.glyphicon-leaf:before {
+  content: "\e103";
+}
+.glyphicon-fire:before {
+  content: "\e104";
+}
+.glyphicon-eye-open:before {
+  content: "\e105";
+}
+.glyphicon-eye-close:before {
+  content: "\e106";
+}
+.glyphicon-warning-sign:before {
+  content: "\e107";
+}
+.glyphicon-plane:before {
+  content: "\e108";
+}
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+.glyphicon-random:before {
+  content: "\e110";
+}
+.glyphicon-comment:before {
+  content: "\e111";
+}
+.glyphicon-magnet:before {
+  content: "\e112";
+}
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+.glyphicon-retweet:before {
+  content: "\e115";
+}
+.glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+.glyphicon-folder-close:before {
+  content: "\e117";
+}
+.glyphicon-folder-open:before {
+  content: "\e118";
+}
+.glyphicon-resize-vertical:before {
+  content: "\e119";
+}
+.glyphicon-resize-horizontal:before {
+  content: "\e120";
+}
+.glyphicon-hdd:before {
+  content: "\e121";
+}
+.glyphicon-bullhorn:before {
+  content: "\e122";
+}
+.glyphicon-bell:before {
+  content: "\e123";
+}
+.glyphicon-certificate:before {
+  content: "\e124";
+}
+.glyphicon-thumbs-up:before {
+  content: "\e125";
+}
+.glyphicon-thumbs-down:before {
+  content: "\e126";
+}
+.glyphicon-hand-right:before {
+  content: "\e127";
+}
+.glyphicon-hand-left:before {
+  content: "\e128";
+}
+.glyphicon-hand-up:before {
+  content: "\e129";
+}
+.glyphicon-hand-down:before {
+  content: "\e130";
+}
+.glyphicon-circle-arrow-right:before {
+  content: "\e131";
+}
+.glyphicon-circle-arrow-left:before {
+  content: "\e132";
+}
+.glyphicon-circle-arrow-up:before {
+  content: "\e133";
+}
+.glyphicon-circle-arrow-down:before {
+  content: "\e134";
+}
+.glyphicon-globe:before {
+  content: "\e135";
+}
+.glyphicon-wrench:before {
+  content: "\e136";
+}
+.glyphicon-tasks:before {
+  content: "\e137";
+}
+.glyphicon-filter:before {
+  content: "\e138";
+}
+.glyphicon-briefcase:before {
+  content: "\e139";
+}
+.glyphicon-fullscreen:before {
+  content: "\e140";
+}
+.glyphicon-dashboard:before {
+  content: "\e141";
+}
+.glyphicon-paperclip:before {
+  content: "\e142";
+}
+.glyphicon-heart-empty:before {
+  content: "\e143";
+}
+.glyphicon-link:before {
+  content: "\e144";
+}
+.glyphicon-phone:before {
+  content: "\e145";
+}
+.glyphicon-pushpin:before {
+  content: "\e146";
+}
+.glyphicon-usd:before {
+  content: "\e148";
+}
+.glyphicon-gbp:before {
+  content: "\e149";
+}
+.glyphicon-sort:before {
+  content: "\e150";
+}
+.glyphicon-sort-by-alphabet:before {
+  content: "\e151";
+}
+.glyphicon-sort-by-alphabet-alt:before {
+  content: "\e152";
+}
+.glyphicon-sort-by-order:before {
+  content: "\e153";
+}
+.glyphicon-sort-by-order-alt:before {
+  content: "\e154";
+}
+.glyphicon-sort-by-attributes:before {
+  content: "\e155";
+}
+.glyphicon-sort-by-attributes-alt:before {
+  content: "\e156";
+}
+.glyphicon-unchecked:before {
+  content: "\e157";
+}
+.glyphicon-expand:before {
+  content: "\e158";
+}
+.glyphicon-collapse-down:before {
+  content: "\e159";
+}
+.glyphicon-collapse-up:before {
+  content: "\e160";
+}
+.glyphicon-log-in:before {
+  content: "\e161";
+}
+.glyphicon-flash:before {
+  content: "\e162";
+}
+.glyphicon-log-out:before {
+  content: "\e163";
+}
+.glyphicon-new-window:before {
+  content: "\e164";
+}
+.glyphicon-record:before {
+  content: "\e165";
+}
+.glyphicon-save:before {
+  content: "\e166";
+}
+.glyphicon-open:before {
+  content: "\e167";
+}
+.glyphicon-saved:before {
+  content: "\e168";
+}
+.glyphicon-import:before {
+  content: "\e169";
+}
+.glyphicon-export:before {
+  content: "\e170";
+}
+.glyphicon-send:before {
+  content: "\e171";
+}
+.glyphicon-floppy-disk:before {
+  content: "\e172";
+}
+.glyphicon-floppy-saved:before {
+  content: "\e173";
+}
+.glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+.glyphicon-floppy-save:before {
+  content: "\e175";
+}
+.glyphicon-floppy-open:before {
+  content: "\e176";
+}
+.glyphicon-credit-card:before {
+  content: "\e177";
+}
+.glyphicon-transfer:before {
+  content: "\e178";
+}
+.glyphicon-cutlery:before {
+  content: "\e179";
+}
+.glyphicon-header:before {
+  content: "\e180";
+}
+.glyphicon-compressed:before {
+  content: "\e181";
+}
+.glyphicon-earphone:before {
+  content: "\e182";
+}
+.glyphicon-phone-alt:before {
+  content: "\e183";
+}
+.glyphicon-tower:before {
+  content: "\e184";
+}
+.glyphicon-stats:before {
+  content: "\e185";
+}
+.glyphicon-sd-video:before {
+  content: "\e186";
+}
+.glyphicon-hd-video:before {
+  content: "\e187";
+}
+.glyphicon-subtitles:before {
+  content: "\e188";
+}
+.glyphicon-sound-stereo:before {
+  content: "\e189";
+}
+.glyphicon-sound-dolby:before {
+  content: "\e190";
+}
+.glyphicon-sound-5-1:before {
+  content: "\e191";
+}
+.glyphicon-sound-6-1:before {
+  content: "\e192";
+}
+.glyphicon-sound-7-1:before {
+  content: "\e193";
+}
+.glyphicon-copyright-mark:before {
+  content: "\e194";
+}
+.glyphicon-registration-mark:before {
+  content: "\e195";
+}
+.glyphicon-cloud-download:before {
+  content: "\e197";
+}
+.glyphicon-cloud-upload:before {
+  content: "\e198";
+}
+.glyphicon-tree-conifer:before {
+  content: "\e199";
+}
+.glyphicon-tree-deciduous:before {
+  content: "\e200";
+}

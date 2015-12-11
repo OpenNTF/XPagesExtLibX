@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <render-kit>
+    <renderer>
+      <component-family>com.ibm.xsp.extlib.layout.ApplicationLayout</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.layout.ResponsiveAppLayout</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.layout.ResponsiveAppLayoutRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>javax.faces.Panel</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.components.responsive.Navbar</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.containers.NavbarRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>javax.faces.Panel</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.components.responsive.Dashboard</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.containers.DashboardRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>com.ibm.xsp.extlib.Outline</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.outline.OutlineMenu</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.outline.OutlineMenuRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>com.ibm.xsp.extlib.Navigator</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.outline.OutlineMenu</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.outline.OutlineMenuRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>com.ibm.xsp.DataIterator</component-family>
+      <renderer-type>com.ibm.xsp.extlibx.theme.bootstrap4.data.DataView</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.data.DataViewRenderer</renderer-class>
+    </renderer>
+    <renderer>
+      <component-family>com.ibm.xsp.extlib.layout.ApplicationLayout</component-family>
+      <renderer-type>com.ibm.xsp.theme.bootstrap.responsive.SimpleResponsiveAppLayout_Bootstrap4</renderer-type>
+      <renderer-class>com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.layout.SimpleResponsiveLayoutRenderer</renderer-class>
+    </renderer>
+  </render-kit>
+</faces-config>

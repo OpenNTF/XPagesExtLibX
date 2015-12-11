@@ -19,7 +19,7 @@
 <feature
       id="org.openntf.extlibx.source"
       label="Extended Components Library for XPages Extension Source Feature"
-      version="9.0.1.v00_10_qualifier"
+      version="9.0.1.v00_15_qualifier"
       provider-name="IBM">
 
    <description url="http://extlib.openntf.org">
@@ -238,7 +238,7 @@
          id="org.openntf.extlibx.source"
          download-size="0"
          install-size="0"
-         version="9.0.1.v00_10_qualifier"
+         version="9.0.1.v00_15_qualifier"
          unpack="true"
          />
 
