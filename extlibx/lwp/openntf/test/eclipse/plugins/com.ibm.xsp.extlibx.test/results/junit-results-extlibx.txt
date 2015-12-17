@@ -1,7 +1,7 @@
 ExtlibX JUnit results, running against Notes 9.0.1
 and the Notes JVM
-Test ran 2014-06-05 17:40
-Lines in file: 10
+Test ran 2015-12-17 17:37
+Lines in file: 63
 
 ~ ExtlibXTestSuite
 xsp.extlibx.test.ExtlibXTestSuite
