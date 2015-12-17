@@ -5,5 +5,58 @@ Lines in file: 10
 
 ~ ExtlibXTestSuite
 xsp.extlibx.test.ExtlibXTestSuite
-
+xsp.extlibx.test.render.Bootstrap4RenderThemeControlTest
+testRenderControlsInThemes(xsp.extlibx.test.render.Bootstrap4RenderThemeControlTest)
+junit.framework.AssertionFailedError: 29 fail(s). :
+META-INF/ibm-common.xsp-config xp:text [theme:Bootstrap4] No output rendered.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:null] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:notes] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:oneui] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:oneuiv2.1] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:oneuiv2] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:webstandard] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:Bootstrap4] No renderer found for component-family javax.faces.Panel, renderer-type com.ibm.xsp.extlibx.theme.bootstrap4.components.responsive.Dashboard
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:dashboard [theme:Bootstrap4] No output rendered.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:null] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:notes] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:oneui] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:oneuiv2.1] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:oneuiv2] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:webstandard] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:Bootstrap4] No renderer found for component-family javax.faces.Panel, renderer-type com.ibm.xsp.extlibx.theme.bootstrap4.components.responsive.Navbar
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:navbar [theme:Bootstrap4] No output rendered.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:null] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:notes] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:oneui] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:oneuiv2.1] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:oneuiv2] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/theme/bootstrap/config/extlib-bootstrap.xsp-config xe:carousel [theme:webstandard] Problem rendering page: com.ibm.commons.util.NotImplementedException: This control is not implemented for the current theme (null) and render-kit(HTML_BASIC), try a different theme, perhaps bootstrap.
+com/ibm/xsp/extlib/config/extlib-layout.xsp-config xe:applicationLayout [theme:Bootstrap4] No renderer found for component-family com.ibm.xsp.extlib.layout.ApplicationLayout, renderer-type com.ibm.xsp.extlibx.theme.bootstrap4.layout.ResponsiveAppLayout
+com/ibm/xsp/extlib/config/extlib-layout.xsp-config xe:applicationLayout [theme:Bootstrap4] No output rendered.
+com/ibm/xsp/extlib/config/extlib-outline.xsp-config xe:navigator [theme:Bootstrap4] No renderer found for component-family com.ibm.xsp.extlib.Outline, renderer-type com.ibm.xsp.extlibx.theme.bootstrap4.outline.OutlineMenu
+com/ibm/xsp/extlib/config/extlib-outline.xsp-config xe:navigator [theme:Bootstrap4] No output rendered.
+com/ibm/xsp/extlib/config/extlib-data-viewpanels.xsp-config xe:dataView [theme:Bootstrap4] No renderer found for component-family com.ibm.xsp.DataIterator, renderer-type com.ibm.xsp.extlibx.theme.bootstrap4.data.DataView
+com/ibm/xsp/extlib/config/extlib-data-viewpanels.xsp-config xe:dataView [theme:Bootstrap4] No output rendered.
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.ibm.xsp.test.framework.render.RenderThemeControlTest.testRenderControlsInThemes(RenderThemeControlTest.java:242)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:60)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)
+	at java.lang.reflect.Method.invoke(Method.java:611)
+	at junit.framework.TestCase.runTest(TestCase.java:164)
+	at junit.framework.TestCase.runBare(TestCase.java:130)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
 
