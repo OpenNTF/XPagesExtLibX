@@ -63,7 +63,7 @@
 	<!-- jquery core js -->
 	<resource>
 		<content-type>application/x-javascript</content-type>
-		<href>/.ibmxspres/.extlib/responsive/jquery/jquery-2.1.1/jquery-2.1.1.min.js</href>
+		<href>/.ibmxspres/.extlib/responsive/jquery/jquery.min.js</href>
 	</resource>
 
 	<!-- bootstrap core js -->
