@@ -33,7 +33,7 @@ public class NavbarLinksRenderer extends NavRenderer {
     @Override
     protected Object getProperty(int prop) {
         switch(prop) {
-            case PROP_POSITION:    return "pull-" + position; //$NON-NLS-1$
+            case PROP_POSITION:    return "pull-xs-" + position; //$NON-NLS-1$
         }
         return super.getProperty(prop);
     }
