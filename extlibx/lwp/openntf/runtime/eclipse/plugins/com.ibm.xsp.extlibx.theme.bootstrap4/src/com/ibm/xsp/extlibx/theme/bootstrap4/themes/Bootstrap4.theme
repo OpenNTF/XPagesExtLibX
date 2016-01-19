@@ -537,7 +537,7 @@
 		<name>Pager</name>
 		<property>
 			<name>rendererType</name>
-			<value>com.ibm.xsp.theme.bootstrap.data.PagerRenderer</value>
+			<value>com.ibm.xsp.extlibx.theme.bootstrap4.data.PagerRenderer</value>
 		</property>
 		<property>
 			<name>styleClass</name>
