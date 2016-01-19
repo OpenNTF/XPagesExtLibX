@@ -10,6 +10,237 @@
  
  TODO Is this addition necessary, as it is already set in Bootstrap's css?
 **/
+/*** >> XSP BASE DECLARATIONS  << ***/
+/********************************************************************************/
+
+/*** XSP TEXT.<?> ***/
+.xspTextViewTitle{font-weight:bold !important;color:#000000;font-size:1.1em;font-weight:bold}
+.xspTextViewColumn{font-weight:normal;}
+.xspTextViewColumnComputed{font-weight:normal;}
+.xspTextViewColumnHeader{font-weight:normal;}
+
+/*** XSP INPUT.<?>  ***/
+.radio td, .checkbox td {padding-left: 1.25rem}
+.radio label input[type="radio"] {margin-top: 3px;}
+.xspGroupCaption {font-weight:bold;padding-bottom:4px;}
+
+/* Removed hack rules for Dojo compatibility */
+.xspInputFieldRichText{width:100%;background-color:#ffffff;}
+.xspInputFieldRichText ul, .xspInputFieldRichText ol{padding-left: 40px;}
+/* override dojo theme rule for rte container - this provides a border around the rte */
+.RichTextEditable{border-color:#b3b3b3 !important;border-style:solid !important;border-width:1px !important;}
+.xspInputFieldHidden{display:none;}
+
+/*** XSP SECTION.<?>  ***/
+.xspSection{}
+.xspSection-header{cursor:pointer;padding:6px;}
+.xspSection-header-underline{}
+.xspSection-header a{text-decoration:none;color:#000000;font-weight:bold;}
+.xspSection-header a:hover{text-decoration:underline;}
+
+.xspSection .xspSection-header > div > a > span,
+.xspSection .xspSection-wide-header > div > a > span,
+.xspSection .xspSection-box-header > div > a > span,
+.xspSection .xspSection-tab-header > div > a > span {line-height: 1.5rem;}
+
+.xspSection .xspSection-header > div > a:focus,
+.xspSection .xspSection-wide-header > div > a:focus,
+.xspSection .xspSection-box-header > div > a:focus,
+.xspSection .xspSection-tab-header > div > a:focus {outline:0px none;}
+
+.xspSection-wide-header{border-bottom-style:solid;border-width:1px;border-color:#e0e0e0;cursor:pointer;padding:6px;}
+.xspSection-wide-header a{text-decoration:none;color:#000000;font-weight:bold;display:block;width:100%;}
+
+.xspSection-box-header{border-style:solid;border-width:1px;border-color:#e0e0e0;cursor:pointer;padding:6px;}
+.xspSection-box-header a{text-decoration:none;color:#000000;font-weight:bold;display:block;width:100%;}
+
+.xspSection-tab-header{margin:0px;border-bottom-style:solid;border-width:1px;border-color:#e0e0e0;cursor:pointer;padding:6px;}
+.xspSection-tab-header a{text-decoration:none;color:#000000;font-weight:bold;}
+.xspSection-tab-header-layout{border:1px solid #e0e0e0;padding: 8px 6px 10px 6px;background-color:#f0f0f0;-moz-border-radius:4px 4px 0px 0px;}
+.xspSection-tab-header-layout-underline{font-size:0.375rem;height:0px;background-color:#f0f0f0;}
+
+.xspSection-body{padding-top: 6px;}
+
+/** PAGERS **/
+ul.pagination {
+	font-weight: normal;
+}
+
+/** type="group" **/
+.xspGroup span{margin:0px;padding:0px;}
+.xspGroup span span{color:#848484;display:inline;margin:0px;padding:0px 7px;border-color:#cccccc;}
+.xspGroup span span.xspFirstItem{}
+.xspGroup span span.xspLastItem{}
+.xspGroup span span a, .xspGroup span span a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspGroup span span a:hover, .xspGroup span span a:focus, .xspGroup span span a:active{font-weight:bold !important;text-decoration:underline;}
+.xspGroup span span.xspCurrentItem{color:#848484;}
+
+/** type="first" **/
+.xspFirst a, .xspFirst a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspFirst a:hover, .xspFirst a:focus, .xspFirst a:active{font-weight:bold !important;text-decoration:underline;}
+.xspFirst .xspCurrentItem{color:#848484;}
+
+/** type="previous" **/
+.xspPrevious a, .xspPrevious a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspPrevious a:hover, .xspPrevious a:focus, .xspPrevious a:active{font-weight:bold !important;text-decoration:underline;}
+.xspPrevious .xspCurrentItem{color:#848484;}
+
+/** type="next" **/
+.xspNext a, .xspNext a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspNext a:hover, .xspNext a:focus, .xspNext a:active{font-weight:bold !important;text-decoration:underline;}
+.xspNext .xspCurrentItem{color:#848484;}
+
+/** type="last" **/
+.xspLast a, .xspLast a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspLast a:hover, .xspLast a:focus, .xspLast a:active{font-weight:bold !important;text-decoration:underline;}
+.xspLast .xspCurrentItem{color:#848484;}
+
+/** type="goto" **/
+.xspGoto a, .xspGoto a:visited{color:#105cb6;font-weight:bold !important;text-decoration:none;}
+.xspGoto a:hover, .xspGoto a:focus, .xspGoto a:active{font-weight:bold !important;text-decoration:underline;}
+.xspGoto input{width:20px;text-align:center;color:#848484;}
+.xspGoto .xspCurrentItem{color:#848484;}
+
+/** XSP VIEW PANEL **/
+.xspDataTable tr > td > input.checkbox + a{
+	position: absolute;
+}
+.xspDataTable div.checkbox {
+	padding-left: 1rem;
+}
+.xspDataTable .xspColumnUnreadImage {
+	display: none;
+}
+.xspDataTableRowUnread .xspBootstrapRowIcon:before{
+	font-family: 'Glyphicons Halflings';
+	content: '\e022';
+	font-weight: normal;
+	color: #0275d8;
+	padding: 0px 8px;
+	font-size: 0.5rem;
+}
+.xspDataTableRowRead .xspBootstrapRowIcon:before{
+	font-family: 'Glyphicons Halflings';
+	content: '\e022';
+	font-weight: normal;
+	color: #DDDDDD;
+	padding: 0px 8px;
+	font-size: 0.5rem;
+}
+.xspDataTableRowRead > td span,
+.xspDataTableRowRead > td a,
+.xspDataTableRowUnread > td span,
+.xspDataTableRowRead > td a{
+	font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.xspDataTableRowUnread {
+	font-weight: bold;	
+}
+
+/** Radio Group and Checkbox Group **/
+.xspGroupCaption {
+	font-weight: bold;
+}
+
+/** Date time picker **/
+.xspInputFieldDateTimePickerIcon {
+	background-image: url("/xsp/.ibmxspres/.extlib/responsive/xpages/img/glyphicons-halflings.png");
+	background-position: -192px -120px;
+}
+.xspInputFieldDatePickerIcon{
+	background-image: url("/xsp/.ibmxspres/.extlib/responsive/xpages/img/glyphicons-halflings.png");
+	background-position: -192px -120px;
+}
+.xspInputFieldTimePickerIcon{
+	background-image: url("/xsp/.ibmxspres/.extlib/responsive/xpages/img/glyphicons-halflings.png");
+	background-position: -48px -24px;
+}
+.xspInputFieldDatePickerIcon, .xspInputFieldTimePickerIcon, .xspInputFieldDateTimePickerIcon {
+	height: 1rem;
+	width: 1rem;
+	border: none;
+	box-shadow: none;
+	padding: 0px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0);
+	margin-top: 0px;
+	left: 2px;
+	position: relative;
+}
+.xspInputFieldEditBox[role="combobox"] {
+	overflow: hidden;
+	position: relative;
+	height: 2.25rem !important;
+	width: 16rem;
+}
+.xsp.dbootstrap .dijitTextBox .dijitValidationContainer {
+	display: none;
+}
+.xsp.dbootstrap .dijitTextBox .dijitButtonNode {
+	border-width: 0;
+}
+.xsp.dbootstrap .dijit.dijitDateTextBox {
+	padding: 0;
+}
+.xsp.dbootstrap .dijit.dijitDateTextBox .dijitInputContainer {
+	padding: .375rem .75rem;
+}
+.xsp.dbootstrap .dijit.dijitDateTextBox .dijitArrowButtonContainer {
+	float: right;
+	padding: 0.625rem 0.75rem;
+}
+.xsp.dbootstrap .dijit.dijitDateTextBox .dijitInputContainer input.dijitInputInner{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	height: auto;
+}
+.xsp.dbootstrap .dijitTextBox{
+	border: .0625rem solid #ccc;
+}
+.xsp.dbootstrap .dijitCalendar {
+	font-size: 0.875rem;
+}
+/* Fix alignment in date time pickers */
+.xsp.dbootstrap .dijitCalendarContainer th, .dijitCalendarContainer td {
+	text-align: center;
+}
+/* Fix arrows for month increment/decrement in DTPs */
+.xsp.dbootstrap .dijitCalendarContainer thead .dijitCalendarMonthContainer th:first-child:before {
+    color: #0275d8;
+    content: "\e079";
+    font-family: "Glyphicons Halflings";
+}
+.xsp.dbootstrap .dijitCalendarContainer thead .dijitCalendarMonthContainer th:last-child:before {
+    color: #0275d8;
+    content: "\e080";
+    font-family: "Glyphicons Halflings";
+}
+.xsp.dbootstrap .dijitCalendarContainer thead .dijitCalendarMonthContainer th:first-child,
+.xsp.dbootstrap .dijitCalendarContainer thead .dijitCalendarMonthContainer th:last-child{
+    cursor: pointer;
+}
+.xsp.dbootstrap .dijitCalendarIncrease:before,
+.xsp.dbootstrap .dijitCalendarDecrease:before {
+	content: " ";
+}
+
+.bootstrap-theme .btn.btn-primary,
+.bootstrap-theme .btn.btn-success,
+.bootstrap-theme .btn.btn-info,
+.bootstrap-theme .btn.btn-danger,
+.bootstrap-theme .btn.btn-warning{
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+/** Type Ahead Styling **/
+.dijitComboBoxMenuPopup .dijitComboBoxMenu .dijitMenuItem pre {
+	background-color: inherit;
+	border-radius: 0px;
+	border: 0px none;
+	padding: 0px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0px;
+	font-size: 1rem;
+}
 
 /** End Base HTML & body styles **/
 html {
@@ -400,8 +631,8 @@ re-worked if/when that switch happens **/
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.eot');
-  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap3/fonts/glyphicons-halflings-regular.eot');
+  src: url('/xsp/.ibmxspres/.extlib/responsive/bootstrap3/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap3/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap3/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/xsp/.ibmxspres/.extlib/responsive/bootstrap3/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
