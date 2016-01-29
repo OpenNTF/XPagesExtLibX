@@ -24,7 +24,7 @@ import com.ibm.commons.log.Log;
 import com.ibm.commons.log.LogMgr;
 
 /**
- *
+ * Bootstrap 4 Logger
  * @author Brian Gleeson (brian.gleeson@ie.ibm.com)
  */
 public class Bootstrap4Logger extends Log {
