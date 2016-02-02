@@ -20,12 +20,6 @@
 
 	<!-- ====================  BEGIN::RESOURCES ================ -->
 	
-    <!-- xpages core styles -->
-    <resource>
-        <content-type>text/css</content-type>
-		<href>/.ibmxspres/.extlib/responsive/xpages/css/xspCoreBootstrap4.css</href>
-    </resource>
-
 	<!-- dbootstrap styles -->
  	<resource dojoTheme="true">
 		<content-type>text/css</content-type>
@@ -53,17 +47,10 @@
 		<href>/.ibmxspres/.extlib/responsive/xpages/css/xspBootstrap4.css</href>
 	</resource>
 	
-	<!-- xpages/bootstrap IE11 styles -->
-	<!-- TODO fix user agent check in 9.0.X to use proper method
-	<resource rendered="#{javascript:context.getUserAgent().getUserAgent().contains('Trident');}">
-		<content-type>text/css</content-type>
-		<href>/.ibmxspres/.extlib/responsive/xpages/css/xsp-ie11.css</href>
-	</resource>
-	 -->
 	<!-- jquery core js -->
 	<resource>
 		<content-type>application/x-javascript</content-type>
-		<href>/.ibmxspres/.extlib/responsive/jquery/jquery-2.1.1/jquery-2.1.1.min.js</href>
+		<href>/.ibmxspres/.extlib/responsive/jquery/jquery.min.js</href>
 	</resource>
 
 	<!-- bootstrap core js -->
@@ -550,7 +537,7 @@
 		<name>Pager</name>
 		<property>
 			<name>rendererType</name>
-			<value>com.ibm.xsp.theme.bootstrap.data.PagerRenderer</value>
+			<value>com.ibm.xsp.extlibx.theme.bootstrap4.data.PagerRenderer</value>
 		</property>
 		<property>
 			<name>styleClass</name>

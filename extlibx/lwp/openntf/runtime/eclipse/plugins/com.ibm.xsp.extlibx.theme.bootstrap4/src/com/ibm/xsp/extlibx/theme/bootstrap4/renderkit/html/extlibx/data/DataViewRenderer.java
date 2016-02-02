@@ -25,6 +25,12 @@ public class DataViewRenderer extends com.ibm.xsp.theme.bootstrap.renderkit.html
     protected Object getProperty(int prop) {
         switch(prop) {
             case PROP_SUMMARYTITLETAG:          return "h6"; // $NON-NLS-1$
+            
+            case PROP_HEADERLEFTCLASS:          return "pull-xs-left"; // $NON-NLS-1$
+            case PROP_HEADERRIGHTCLASS:         return "pull-xs-right"; // $NON-NLS-1$
+
+            case PROP_FOOTERLEFTCLASS:          return "pull-xs-left"; // $NON-NLS-1$
+            case PROP_FOOTERRIGHTCLASS:         return "pull-xs-right"; // $NON-NLS-1$
         }
         return super.getProperty(prop);
     }
