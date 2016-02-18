@@ -270,7 +270,7 @@ public class SimpleResponsiveLayoutRenderer extends com.ibm.xsp.theme.bootstrap.
         UIComponent cSearchBar = c.getSearchBar();
         if (!isEmptyComponent(cSearchBar)) {
             w.startElement("div", c); // $NON-NLS-1$
-            w.writeAttribute("class","form-inline navbar-form pull-right applayout-searchbar",null); // $NON-NLS-1$ $NON-NLS-2$
+            w.writeAttribute("class","form-inline navbar-form pull-xs-right applayout-searchbar",null); // $NON-NLS-1$ $NON-NLS-2$
             w.writeAttribute("role", "search", null); // $NON-NLS-1$ $NON-NLS-2$
             FacesUtil.renderComponent(context, cSearchBar);
             w.endElement("div"); // $NON-NLS-1$
@@ -280,7 +280,7 @@ public class SimpleResponsiveLayoutRenderer extends com.ibm.xsp.theme.bootstrap.
         SearchBar searchBar = configuration.getSearchBar();
         if (searchBar != null && searchBar.isRendered()) {
             w.startElement("div", c); // $NON-NLS-1$
-            w.writeAttribute("class","form-inline navbar-form pull-right applayout-searchbar",null); // $NON-NLS-1$ $NON-NLS-2$
+            w.writeAttribute("class","form-inline navbar-form pull-xs-right applayout-searchbar",null); // $NON-NLS-1$ $NON-NLS-2$
             w.writeAttribute("role", "search", null); // $NON-NLS-1$ $NON-NLS-2$
             
             w.startElement("div", c); // $NON-NLS-1$
