@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.openntf.extlibx.feature_9.0.1.v00_15_qualifier.jar" id="org.openntf.extlibx.feature" version="9.0.1.v00_15_qualifier">
+   <feature url="features/org.openntf.extlibx.feature_9.0.1.qualifier.jar" id="org.openntf.extlibx.feature" version="9.0.1.qualifier">
       <category name="OpenNTF Builds"/>
    </feature>
    <category-def name="OpenNTF Builds" label="OpenNTF Builds">

@@ -17,7 +17,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <module>com.ibm.xsp.extlibx</module>
 <module>com.ibm.xsp.extlibx.core</module>
 <module>com.ibm.xsp.extlibx.controls</module>
-<module>com.ibm.xsp.theme.bootstrap4</module>
+<module>com.ibm.xsp.extlibx.theme.bootstrap4</module>
 </modules>
 
 </project>

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ExtlibX Controls
 Bundle-SymbolicName: com.ibm.xsp.extlibx.controls;singleton:=true
-Bundle-Version: 9.0.1.v00_15_qualifier
+Bundle-Version: 9.0.1.v00_16_qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: com.ibm.commons,
  com.ibm.xsp.core,

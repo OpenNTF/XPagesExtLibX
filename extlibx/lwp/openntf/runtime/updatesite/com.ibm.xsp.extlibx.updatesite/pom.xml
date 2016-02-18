@@ -3,7 +3,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <modelVersion>4.0.0</modelVersion>
 <artifactId>com.ibm.xsp.extlibx.updatesite</artifactId>
 <packaging>eclipse-update-site</packaging>
-<version>9.0.1-SNAPSHOT</version>
 <parent>
 <groupId>com.ibm.xsp.extlibx</groupId>
 <artifactId>com.ibm.xsp.extlibx.parent</artifactId>
@@ -33,4 +32,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 </plugins>
 </build>
 -->
+	<version>9.0.1-SNAPSHOT</version>
 </project>

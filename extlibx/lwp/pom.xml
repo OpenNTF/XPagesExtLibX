@@ -9,7 +9,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <modules>
 <module>/openntf/runtime/eclipse/plugins</module>
 <module>/openntf/runtime/eclipse/features</module>
-<module>/openntf/runtime/updatesite/org.openntf.extlibx.updatesite</module>
+<module>/openntf/runtime/updatesite/com.ibm.xsp.extlibx.updatesite</module>
 </modules>
 
 <properties>
@@ -25,7 +25,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <repository>
 <id>notes</id>
 <layout>p2</layout>
-<url>file:///C:\updateSite</url>
+<url>${notes-platform}</url>
 </repository>
 </repositories>
 
