@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='com.ibm.xsp.extlibx.theme.bootstrap4' version='9.0.1.v00_16_qualifier'>
+    <properties size='5'>
+      <property name='artifact.size' value='191973'/>
+      <property name='download.size' value='191973'/>
+      <property name='maven-groupId' value='com.ibm.xsp.extlibx'/>
+      <property name='maven-artifactId' value='com.ibm.xsp.extlibx.theme.bootstrap4'/>
+      <property name='maven-version' value='9.0.1.v00_16-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

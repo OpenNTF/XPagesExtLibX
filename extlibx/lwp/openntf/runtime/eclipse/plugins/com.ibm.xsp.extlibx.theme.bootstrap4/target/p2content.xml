@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='com.ibm.xsp.extlibx.theme.bootstrap4' version='9.0.1.v00_16_qualifier'>
+    <update id='com.ibm.xsp.extlibx.theme.bootstrap4' range='[0.0.0,9.0.1.v00_16_qualifier)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='XPages Responsive Bootstrap4 Theme'/>
+      <property name='org.eclipse.equinox.p2.provider' value='IBM'/>
+      <property name='maven-groupId' value='com.ibm.xsp.extlibx'/>
+      <property name='maven-artifactId' value='com.ibm.xsp.extlibx.theme.bootstrap4'/>
+      <property name='maven-version' value='9.0.1.v00_16-SNAPSHOT'/>
+    </properties>
+    <provides size='17'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.ibm.xsp.extlibx.theme.bootstrap4' version='9.0.1.v00_16_qualifier'/>
+      <provided namespace='osgi.bundle' name='com.ibm.xsp.extlibx.theme.bootstrap4' version='9.0.1.v00_16_qualifier'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.config' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.minifier' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.plugin' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.containers' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.containers.tree' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.data' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.layout' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.layout.tree' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.outline' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.outline.tree' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.renderkit.html.extlibx.util' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.resources' version='0.0.0'/>
+      <provided namespace='java.package' name='com.ibm.xsp.extlibx.theme.bootstrap4.themes' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='13'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.commons' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.commons.xml' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.extsn' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.designer' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.domino' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.extlib.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.extlib.controls' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.designer.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.designer.runtime.acl' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.designer.runtime.directory' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.ibm.xsp.theme.bootstrap' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='com.ibm.xsp.extlibx.theme.bootstrap4' version='9.0.1.v00_16_qualifier'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: com.ibm.xsp.extlibx.theme.bootstrap4;singleton:=true&#xA;Bundle-Version: 9.0.1.v00_16_qualifier&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

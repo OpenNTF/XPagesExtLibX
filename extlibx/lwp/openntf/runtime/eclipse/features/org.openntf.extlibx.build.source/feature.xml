@@ -19,7 +19,7 @@
 <feature
       id="org.openntf.extlibx.build.source"
       label="Build-time-only ExtlibX Runtime Source Build Feature"
-      version="9.0.1.v00_16_20160119-2239"
+      version="9.0.1.v00_16_qualifier"
       provider-name="IBM">
 
    <description url="http://www.example.com/description">
