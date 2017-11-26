@@ -28,9 +28,17 @@ import com.ibm.xsp.extlib.config.ExtlibPluginConfig;
  */
 public class ControlsXConfig extends ExtlibPluginConfig {
 
-    @Override
-    public String[] getXspConfigFiles(String[] files) {
-        return concat(files, new String[] {
-        });
-    }
+	@Override
+	public String[] getXspConfigFiles(String[] files) {
+		return concat(files, new String[] { "com/ibm/xsp/extlibx/controls/config/extlib-table.xsp-config", // $NON-NLS-1$
+		});
+	}
+
+	@Override
+	public String[] getFacesConfigFiles(String[] files) {
+		return concat(files, new String[] { 
+				"com/ibm/xsp/extlibx/controls/config/extlib-table-faces-config.xml", // $NON-NLS-1$
+		});
+	}
+
 }
