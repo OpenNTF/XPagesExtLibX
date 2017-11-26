@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+	<faces-config-extension>
+	    <namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+    	<default-prefix>xe</default-prefix>
+	</faces-config-extension>
+
+	<!-- Table Header Cell -->
+	<component>
+		<description>A control that displays a single cell in a table row.</description>
+		<display-name>Table Header Cell</display-name>
+		<component-type>com.ibm.xsp.TableHeaderCell</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.table.UITableHeaderCell</component-class>
+		<component-extension>
+			<javadoc-description>XPages Container Controls - Table Header Cell</javadoc-description>
+			<base-component-type>com.ibm.xsp.TableCell</base-component-type>
+			<component-family>com.ibm.xsp.Tag</component-family>
+			<renderer-type>com.ibm.xsp.extlibx.TableHeaderCell</renderer-type>
+			<tag-name>th</tag-name>
+			<designer-extension>
+				<generate-id>false</generate-id>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+</faces-config>

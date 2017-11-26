@@ -9,4 +9,6 @@ Require-Bundle: com.ibm.commons,
  com.ibm.xsp.extsn,
  com.ibm.xsp.extlib,
  com.ibm.xsp.extlibx.core
-Export-Package: com.ibm.xsp.extlibx.controls.config
+Export-Package: com.ibm.xsp.extlibx.component.table,
+ com.ibm.xsp.extlibx.controls.config,
+ com.ibm.xsp.extlibx.renderkit.table
