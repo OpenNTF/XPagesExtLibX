@@ -6,6 +6,12 @@ Bundle-Version: 9.0.1.v00_16_qualifier
 Bundle-Vendor: IBM
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.runtime,
- com.ibm.xsp.extlib
+ com.ibm.xsp.extlib,
+ com.ibm.xsp.extlib.relational,
+ com.ibm.xsp.core,
+ com.ibm.commons,
+ com.ibm.domino.napi,
+ com.ibm.designer.runtime,
+ com.ibm.xsp.domino
 Bundle-Activator: com.ibm.xsp.extlibx.plugin.ExtLibXCoreActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
