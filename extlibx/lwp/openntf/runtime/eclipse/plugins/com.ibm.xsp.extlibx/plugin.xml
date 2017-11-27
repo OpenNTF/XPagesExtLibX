@@ -9,8 +9,10 @@
          <service type="com.ibm.xsp.runtime.resources" class="com.ibm.xsp.extlibx.relational.jdbc.JdbcDataSourceProvider" />
    </extension>
    
+   <!--
    <extension point="com.ibm.commons.Extension">
          <service type="com.ibm.xsp.core.events.ApplicationListener" class="com.ibm.xsp.extlibx.relational.jdbc.ApplicationInitializer" />
    </extension>
+   -->
    
 </plugin>

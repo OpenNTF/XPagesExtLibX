@@ -17,7 +17,7 @@ public class ApplicationInitializer implements ApplicationListener {
 
 	private static final LogMgr logger = ExtlibCoreLogger.RELATIONAL;
 
-	public static final String XSPPROP_USERNAME = "horizon.jdbc.nsfdocumentprovider.username";
+	public static final String XSPPROP_USERNAME = "xsp.jdbc.nsfdocumentprovider.username";
 
 	@Override
 	public void applicationCreated(ApplicationEx application) {
@@ -27,7 +27,7 @@ public class ApplicationInitializer implements ApplicationListener {
 			logger.info("JDBC Connection Details Application Initializer Not Running - No Username specified");
 			return;
 		} else {
-			logger.info("JDBC Connection Details Application Initializer Running with credentials for {}", userName);
+			logger.info("JDBC Connection Details Application Initializer Running with credentials for {0}", userName);
 		}
 
 		Session mySession = null;

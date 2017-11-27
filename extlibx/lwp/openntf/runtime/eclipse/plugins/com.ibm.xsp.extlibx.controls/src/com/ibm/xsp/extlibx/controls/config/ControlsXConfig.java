@@ -38,6 +38,7 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 	public String[] getFacesConfigFiles(String[] files) {
 		return concat(files, new String[] { 
 				"com/ibm/xsp/extlibx/controls/config/extlib-table-faces-config.xml", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-jdbc-faces-config.xml", // $NON-NLS-1$
 		});
 	}
 

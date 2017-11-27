@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.lotus.com/dxl" name="Administration\JdbcConnection" alias="JdbcConnection" publicaccess="false" comment="Connection" renderpassthrough="true">
+  <code event="windowtitle">
+    <formula>"JDBC Connection"</formula>
+  </code>
+  <body>
+    <richtext>
+      <pardef id="1"/>
+      <par def="1"/>
+      <table minrowheight="0.3153in" widthtype="fixedleft" columnspacing="0.0785in" refwidth="7.2076in">
+        <tablecolumn width="0.8792in"/>
+        <tablecolumn width="6.0146in"/>
+        <tablerow>
+          <tablecell valign="center" bgcolor="#c2efff">
+            <pardef id="3" keepwithnext="true" keeptogether="true"/>
+            <par def="3">server</par>
+          </tablecell>
+          <tablecell valign="center" bgcolor="#c2efff">
+            <pardef id="4" keepwithnext="true" keeptogether="true"/>
+            <par def="4">
+              <field type="text" kind="editable" name="server"/>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="7" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata> Leave Blank if you want to use as Default Connection for all servers</par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center">
+            <par def="3">name</par>
+          </tablecell>
+          <tablecell valign="center">
+            <par def="4">
+              <field type="text" kind="editable" name="name"/>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center">
+            <par def="3">url</par>
+          </tablecell>
+          <tablecell valign="center">
+            <par def="4">
+              <field type="text" kind="editable" name="url"/>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center">
+            <par def="3">driver</par>
+          </tablecell>
+          <tablecell valign="center">
+            <par def="4">
+              <field type="keyword" kind="editable" name="driver">
+                <keywords ui="dialoglist" allownew="true">
+                  <textlist>
+                    <text>org.hsqldb.jdbc.JDBCDriver</text>
+                    <text>com.microsoft.sqlserver.jdbc.SQLServerDriver</text>
+                  </textlist>
+                </keywords>
+              </field>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center">
+            <par def="3">user</par>
+          </tablecell>
+          <tablecell valign="center">
+            <par def="4">
+              <field type="text" kind="editable" name="user"/>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center">
+            <par def="3">password</par>
+          </tablecell>
+          <tablecell valign="center">
+            <par def="4">
+              <field type="text" kind="editable" name="password"/>
+              <compositedata type="98" prevtype="65418" nexttype="222" afterparcount="6" containertype="65418" aftercontainercount="1" afterbegincount="3">
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center" bgcolor="#ffe0f5">
+            <par def="3">Authors</par>
+          </tablecell>
+          <tablecell valign="center" bgcolor="#ffe0f5">
+            <par def="4">
+              <field type="authors" kind="editable" name="security.authors">
+                <code event="defaultvalue">
+                  <formula>"[AdministrationA]"</formula>
+                </code>
+              </field>
+            </par>
+          </tablecell>
+        </tablerow>
+        <tablerow>
+          <tablecell valign="center" bgcolor="#ffe0f5">
+            <par def="3">Readers</par>
+          </tablecell>
+          <tablecell valign="center" bgcolor="#ffe0f5">
+            <par def="4">
+              <field type="readers" kind="editable" name="security.readers">
+                <code event="defaultvalue">
+                  <formula>"[AdministrationA]"</formula>
+                </code>
+              </field>
+            </par>
+          </tablecell>
+        </tablerow>
+      </table>
+      <par def="1"/>
+      <par def="1"/>
+      <par def="1">Url Examples:</par>
+      <par def="1"/>
+      <par def="1">HyperSQL In Memory, db named 'mydatabase': </par>
+      <par def="1"/>
+      <par def="1">
+        <run>
+          <font name="Consolas" pitch="fixed" truetype="true" familyid="30"/>jdbc:hsqldb:mem:mydatabase</run>
+      </par>
+      <par def="1">
+        <run>
+          <font name="Consolas" pitch="fixed" truetype="true" familyid="30"/>
+        </run>
+      </par>
+      <par def="1">HyperSQL Server on localhost , db named 'mydatabase'</par>
+      <par def="1"/>
+      <pardef id="5" leftmargin="1in" rightmargin="100%"/>
+      <par def="5">
+        <run>
+          <font name="Consolas" pitch="fixed" truetype="true" familyid="30"/>jdbc:hsqldb:hsql://localhost/mydatabase</run>
+      </par>
+    </richtext>
+  </body>
+</form>

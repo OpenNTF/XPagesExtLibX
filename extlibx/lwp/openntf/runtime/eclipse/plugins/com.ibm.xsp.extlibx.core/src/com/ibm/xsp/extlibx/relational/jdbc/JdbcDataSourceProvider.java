@@ -15,13 +15,14 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 
 	private static final LogMgr logger = ExtlibCoreLogger.RELATIONAL;
 	
-	private static final String GLOBAL_CONFIG_DB = "Horizon/Globals.nsf";
+	public static final String RESOURCETYPE = "NSFJDBC";
 
-	public static final String RESOURCETYPE = "HorizonJDBC";
-
+	public static final String XSPPROP_LOCALPROVIDER = "xsp.jdbc.nsfdocumentprovider.local";
+	public static final String XSPPROP_GLOBALPROVIDERPATH = "xsp.jdbc.nsfdocumentprovider.global.filepath";
+	
 	private static Boolean globalRegistered = false;
 
-	private static IJdbcResourceFactoryProvider globalProvider = new NSFDocumentJdbcProvider(GLOBAL_CONFIG_DB);
+	private static IJdbcResourceFactoryProvider globalProvider = new NSFDocumentJdbcProvider("");
 
 	private static IJdbcResourceFactoryProvider localProvider = new NSFDocumentJdbcProvider();
 
@@ -33,6 +34,12 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 		ExtLibXJndiRegistry.registerConnections(globalProvider);
 	}
 
+	public static void resetGlobalProvider(String filePath) throws ResourceFactoriesException {
+		globalProvider = new NSFDocumentJdbcProvider(filePath);
+		ExtLibXJndiRegistry.registerConnections(globalProvider);
+	}
+
+	
 	public static void initGlobalProvider() throws ResourceFactoriesException {
 
 		synchronized (globalRegistered) {
@@ -71,7 +78,7 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 			throws ResourceFactoriesException {
 
 		if (StringUtil.equals(type, RESOURCETYPE)) {
-			logger.traceDebug("Being asked for Jdbc Resource '{}'", name);
+			logger.traceDebug("Being asked for Jdbc Resource '{0}'", name);
 			switch (scope) {
 			case IResourceFactory.SCOPE_APPLICATION: {
 				
@@ -88,7 +95,7 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 					return f;
 				}
 
-				logger.traceDebug("Could not find Jdbc Resource '{}'", name);
+				logger.traceDebug("Could not find Jdbc Resource '{0}'", name);
 				return null;
 			}
 			case IResourceFactory.SCOPE_GLOBAL: {

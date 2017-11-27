@@ -36,7 +36,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 	private String filePath = null;
 
 	public NSFDocumentJdbcProvider() {
-		logger.traceDebug("Created a NSF DocumentJdbcProvider, this should not be in OpenLog");
+		logger.traceDebug("Created a NSF DocumentJdbcProvider");
 	}
 
 	public NSFDocumentJdbcProvider(String filePath) {
@@ -83,7 +83,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 
 		} else {
 
-			logger.traceDebug("Get Database with FilePath '{}'", filePath);
+			logger.traceDebug("Get Database with FilePath '{0}'", filePath);
 			return s.getDatabase(null, filePath);
 		}
 	}
@@ -123,7 +123,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 				ViewEntryCollection vec = view.getAllEntries();
 
 				if (vec.getCount() < 1) {
-					logger.traceDebug("No JDBC Connections found in view '{}'", VIEWNAME);
+					logger.traceDebug("No JDBC Connections found in view '{0}'", VIEWNAME);
 				}
 
 				ViewEntry ve = vec.getFirstEntry();
@@ -135,7 +135,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 						String name = (String) ve.getColumnValues().get(1);
 						if (StringUtil.isNotEmpty(name)) {
 
-							logger.traceDebug("Adding name to connections: '{}'", name);
+							logger.traceDebug("Adding name to connections: '{0}'", name);
 							names.add(name);
 
 						}
@@ -147,14 +147,14 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 
 				}
 			} else {
-				logger.traceDebug("Connection Names not loaded due to missing view '{}'", VIEWNAME);
+				logger.traceDebug("Connection Names not loaded due to missing view '{0}'", VIEWNAME);
 			}
 
 		} catch (Exception e) {
 			if (StringUtil.isEmpty(filePath)) {
 				logger.error("Error loading Connection Names from Database");
 			} else {
-				logger.error("Error loading Connection Names from Database '{}'", filePath);
+				logger.error("Error loading Connection Names from Database '{0}'", filePath);
 			}
 		}
 
@@ -169,7 +169,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 	
 	public IJdbcResourceFactory loadConnection(String name) {
 
-		logger.traceDebug("Load Connection '{}'", name);
+		logger.traceDebug("Load Connection '{0}'", name);
 
 		try {
 
@@ -197,13 +197,13 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 			Document doc = view.getDocumentByKey(v, true);
 
 			if (doc == null) {
-				logger.traceDebug("No JDBC Document Found for '{}', '{}'", server, name);
+				logger.traceDebug("No JDBC Document Found for '{0}', '{0}'", server, name);
 				v.set(0, "Default");
 				doc = view.getDocumentByKey(v, true);
 			}
 
 			if (doc == null) {
-				logger.traceDebug("No JDBC Document Found for 'Default', '{}'", name);
+				logger.traceDebug("No JDBC Document Found for 'Default', '{0}'", name);
 				return null;
 			}
 
@@ -224,7 +224,7 @@ public class NSFDocumentJdbcProvider implements IJdbcResourceFactoryProvider {
 					useTimeout, idleTimeout, maxLiveTime, acquireTimeout);
 
 		} catch (Exception e) {
-			logger.error("Error Loading Connection Information from Document '{}'", e);
+			logger.error("Error Loading Connection Information from Document '{0}'", e);
 		}
 		return null;
 
