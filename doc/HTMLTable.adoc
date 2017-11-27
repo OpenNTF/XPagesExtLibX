@@ -1,0 +1,49 @@
+= HTML Table Header + thead and tfoot
+
+To use a th Cell, simply use the Table Header Cell control
+
+To use the thead and tfoot elements, add the contents of it using the thead and tfoot facets.
+Make sure the table is set to have it's rendererType as com.ibm.xsp.extlibx.Table
+
+## Setting the rendererType via a theme
+
+You can set the renderer Type for all Tables in your application by including the following in your theme configuration file:
+
+```
+	<control>
+		<name>HtmlTable</name>
+		<property>
+			<name>rendererType</name>
+			<value>com.ibm.xsp.extlibx.Table</value>
+		</property>
+	</control>
+```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:table rendererType="com.ibm.xsp.extlibx.Table">
+		<xp:this.facets>
+			<xp:tr xp:key="thead">
+				<xe:th>Header 1</xe:th>
+				<xe:th>Header 2</xe:th>
+			</xp:tr>
+			<xp:tr xp:key="tfoot">
+				<xp:td>Footer 1</xp:td>
+				<xp:td>Footer 2</xp:td>
+			</xp:tr>
+
+		</xp:this.facets>
+		<xp:tr>
+			<xp:td>R1C1</xp:td>
+			<xp:td>R1C2</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>R2C1</xp:td>
+			<xp:td>R2C2</xp:td>
+		</xp:tr>
+	</xp:table>
+
+</xp:view>
+```
