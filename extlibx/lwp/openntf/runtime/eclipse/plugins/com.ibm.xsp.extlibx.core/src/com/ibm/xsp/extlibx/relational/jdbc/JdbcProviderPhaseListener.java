@@ -4,11 +4,15 @@ import javax.faces.event.PhaseEvent;
 import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
+import com.ibm.commons.log.LogMgr;
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.application.ApplicationEx;
+import com.ibm.xsp.extlib.log.ExtlibCoreLogger;
 
 public class JdbcProviderPhaseListener implements PhaseListener {
 
+	private static final LogMgr logger = ExtlibCoreLogger.RELATIONAL;
+	
 	private static final long serialVersionUID = 1L;
 
 	private Boolean uselocal = null;
@@ -52,7 +56,7 @@ public class JdbcProviderPhaseListener implements PhaseListener {
 	public void beforePhase(PhaseEvent event) {
 
 		if (isUseLocal() && !localregistered) {
-			System.out.println("Doing Local");
+			logger.traceDebug("Initialising Local JDBCNotesDocumentProvider");
 			try {
 				JdbcDataSourceProvider.resetLocalProvider();
 				localregistered = true;
@@ -62,7 +66,7 @@ public class JdbcProviderPhaseListener implements PhaseListener {
 		}
 
 		if (isUseGlobal() && !globalregistered) {
-			System.out.println("Doing Global");
+			logger.traceDebug("Initialising Global JDBCNotesDocumentProvider: {0}", globalFilePath);
 			try {
 				JdbcDataSourceProvider.resetGlobalProvider(globalFilePath);
 				globalregistered = true;
