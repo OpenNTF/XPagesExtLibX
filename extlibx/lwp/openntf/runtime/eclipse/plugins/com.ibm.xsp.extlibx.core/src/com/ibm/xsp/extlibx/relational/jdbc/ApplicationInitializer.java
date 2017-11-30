@@ -45,13 +45,7 @@ public class ApplicationInitializer implements ApplicationListener {
 		}
 
 		try {
-			JdbcDataSourceProvider.resetGlobalProvider();
-		} catch (Throwable ex) {
-			logger.error("Error Initialising Global NSF JDBC Provider", ex);
-		}
-
-		try {
-			JdbcDataSourceProvider.resetLocalProvider();
+			JdbcDataSourceProvider.resetProvider();
 		} catch (Throwable ex) {
 			logger.error("Error Initialising Local NSF JDBC Provider", ex);
 		}
@@ -81,7 +75,7 @@ public class ApplicationInitializer implements ApplicationListener {
 
 	public void applicationRefreshed(ApplicationEx application) {
 		try {
-			JdbcDataSourceProvider.resetLocalProvider();
+			JdbcDataSourceProvider.resetProvider();
 		} catch (Throwable ex) {
 			logger.error("Error refreshing Local Provider", ex);
 		}

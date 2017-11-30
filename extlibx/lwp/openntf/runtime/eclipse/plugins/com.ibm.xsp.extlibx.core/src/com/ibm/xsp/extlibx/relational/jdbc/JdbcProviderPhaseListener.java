@@ -12,14 +12,12 @@ import com.ibm.xsp.extlib.log.ExtlibCoreLogger;
 public class JdbcProviderPhaseListener implements PhaseListener {
 
 	private static final LogMgr logger = ExtlibCoreLogger.RELATIONAL;
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private Boolean uselocal = null;
-	private boolean localregistered = false;
-	private Boolean useglobal=null;
-	private String globalFilePath = null;
-	private boolean globalregistered = false;
+	private Boolean useglobal = null;
+	private boolean registered = false;
 
 	public JdbcProviderPhaseListener() {
 
@@ -34,7 +32,7 @@ public class JdbcProviderPhaseListener implements PhaseListener {
 
 		if (uselocal == null) {
 			ApplicationEx app = ApplicationEx.getInstance();
-			String local = app.getApplicationProperty(JdbcDataSourceProvider.XSPPROP_LOCALPROVIDER, "");
+			String local = app.getApplicationProperty(NSFDocumentJdbcProvider.XSPPROP_LOCALPROVIDER, "");
 			uselocal = StringUtil.isTrueValue(local);
 		}
 		return uselocal;
@@ -45,7 +43,7 @@ public class JdbcProviderPhaseListener implements PhaseListener {
 
 		if (useglobal == null) {
 			ApplicationEx app = ApplicationEx.getInstance();
-			globalFilePath = app.getApplicationProperty(JdbcDataSourceProvider.XSPPROP_GLOBALPROVIDERPATH, "");
+			String globalFilePath = app.getApplicationProperty(NSFDocumentJdbcProvider.XSPPROP_GLOBALPROVIDERPATH, "");
 			useglobal = StringUtil.isNotEmpty(globalFilePath);
 		}
 		return useglobal;
@@ -55,21 +53,11 @@ public class JdbcProviderPhaseListener implements PhaseListener {
 	@Override
 	public void beforePhase(PhaseEvent event) {
 
-		if (isUseLocal() && !localregistered) {
-			logger.traceDebug("Initialising Local JDBCNotesDocumentProvider");
+		if ((isUseLocal() || isUseGlobal()) && !registered) {
+			logger.traceDebug("Initialising JDBCNotesDocumentProvider");
 			try {
-				JdbcDataSourceProvider.resetLocalProvider();
-				localregistered = true;
-			} catch (Exception e) {
-
-			}
-		}
-
-		if (isUseGlobal() && !globalregistered) {
-			logger.traceDebug("Initialising Global JDBCNotesDocumentProvider: {0}", globalFilePath);
-			try {
-				JdbcDataSourceProvider.resetGlobalProvider(globalFilePath);
-				globalregistered = true;
+				JdbcDataSourceProvider.resetProvider();
+				registered = true;
 			} catch (Exception e) {
 
 			}

@@ -14,50 +14,10 @@ import com.ibm.xsp.extlibx.relational.jdbc.jndi.ExtLibXJndiRegistry;
 public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 
 	private static final LogMgr logger = ExtlibCoreLogger.RELATIONAL;
-	
+
 	public static final String RESOURCETYPE = "NSFJDBC";
 
-	public static final String XSPPROP_LOCALPROVIDER = "xsp.jdbc.nsfdocumentprovider.local";
-	public static final String XSPPROP_GLOBALPROVIDERPATH = "xsp.jdbc.nsfdocumentprovider.global.filepath";
-	
-	private static Boolean globalRegistered = false;
-
-	private static IJdbcResourceFactoryProvider globalProvider = new NSFDocumentJdbcProvider("");
-
-	private static IJdbcResourceFactoryProvider localProvider = new NSFDocumentJdbcProvider();
-
-	public static void resetLocalProvider() throws ResourceFactoriesException {
-		ExtLibXJndiRegistry.registerConnections(localProvider);
-	}
-
-	public static void resetGlobalProvider() throws ResourceFactoriesException {
-		ExtLibXJndiRegistry.registerConnections(globalProvider);
-	}
-
-	public static void resetGlobalProvider(String filePath) throws ResourceFactoriesException {
-		globalProvider = new NSFDocumentJdbcProvider(filePath);
-		ExtLibXJndiRegistry.registerConnections(globalProvider);
-	}
-
-	
-	public static void initGlobalProvider() throws ResourceFactoriesException {
-
-		synchronized (globalRegistered) {
-			if (!globalRegistered) {
-				ExtLibXJndiRegistry.registerConnections(globalProvider);
-				globalRegistered = true;
-			}
-		}
-
-	}
-
-	public static void unregisterLocalProvider() throws ResourceFactoriesException {
-		ExtLibXJndiRegistry.unregisterConnections(localProvider);
-	}
-
-	public static void unregisterGlobalProvider() throws ResourceFactoriesException {
-		ExtLibXJndiRegistry.unregisterConnections(globalProvider);
-	}
+	private static IJdbcResourceFactoryProvider provider = new NSFDocumentJdbcProvider();
 
 	public JdbcDataSourceProvider() {
 
@@ -65,12 +25,16 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 
 	}
 
-	public IJdbcResourceFactoryProvider getLocalProvider() {
-		return localProvider;
+	public static void resetProvider() throws ResourceFactoriesException {
+		ExtLibXJndiRegistry.registerConnections(provider);
 	}
 
-	public IJdbcResourceFactoryProvider getGlobalProvider() {
-		return globalProvider;
+	public static void unregisterLocalProvider() throws ResourceFactoriesException {
+		ExtLibXJndiRegistry.unregisterConnections(provider);
+	}
+
+	public IJdbcResourceFactoryProvider getProvider() {
+		return provider;
 	}
 
 	@Override
@@ -81,28 +45,15 @@ public class JdbcDataSourceProvider implements ResourceFactoryProvider {
 			logger.traceDebug("Being asked for Jdbc Resource '{0}'", name);
 			switch (scope) {
 			case IResourceFactory.SCOPE_APPLICATION: {
-				
-				// Look at the local providers
-				IJdbcResourceFactory f = getLocalProvider().loadResourceFactory(name);
-				if (f != null) {
-					logger.traceDebug("Found " + name + " in Local");
-					return f;
-				}
 
-				f = getGlobalProvider().loadResourceFactory(name);
+				// Look at the local providers
+				IJdbcResourceFactory f = getProvider().loadResourceFactory(name);
 				if (f != null) {
-					logger.traceDebug("Found JDBC Resource " + name + " in Global");
+					logger.traceDebug("Found Jdbc Resource '{0}'", name);
 					return f;
 				}
 
 				logger.traceDebug("Could not find Jdbc Resource '{0}'", name);
-				return null;
-			}
-			case IResourceFactory.SCOPE_GLOBAL: {
-				IJdbcResourceFactory f = getGlobalProvider().loadResourceFactory(name);
-				if (f != null) {
-					return f;
-				}
 				return null;
 			}
 			}
