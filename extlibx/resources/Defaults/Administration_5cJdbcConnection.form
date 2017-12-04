@@ -99,11 +99,7 @@ Yg4BAIQAAAAAAAAAAAA=
           </tablecell>
           <tablecell valign="center" bgcolor="#ffe0f5">
             <par def="4">
-              <field type="authors" kind="editable" name="security.authors">
-                <code event="defaultvalue">
-                  <formula>"[AdministrationA]"</formula>
-                </code>
-              </field>
+              <field type="authors" kind="editable" name="security.authors"/>
             </par>
           </tablecell>
         </tablerow>
@@ -113,11 +109,7 @@ Yg4BAIQAAAAAAAAAAAA=
           </tablecell>
           <tablecell valign="center" bgcolor="#ffe0f5">
             <par def="4">
-              <field type="readers" kind="editable" name="security.readers">
-                <code event="defaultvalue">
-                  <formula>"[AdministrationA]"</formula>
-                </code>
-              </field>
+              <field type="readers" kind="editable" name="security.readers"/>
             </par>
           </tablecell>
         </tablerow>
