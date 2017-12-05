@@ -4,13 +4,33 @@ The NSF Document JDBC Provider, provides a way to store JDBC Connection informat
 
 This helps to avoid placing passwords within the design of the application, and allows them to be configurable at runtime / deployment.
 
-You can provide information as a 'Local' provider, which means that the JDBC Configuration is read from the current database, or you can also provide it using a 'global' provider, which means that it will look for connection information in a predetermined NSF (server-wide)
+You can set up information as a 'Local' provider, which means that the JDBC Configuration is read from the current database, or you can also provide it using a 'global' provider, which means that it will look for connection information in a predetermined NSF (server-wide)
+
+## Feedback / Suggestions / Troubleshooting
+
+I would love to hear any feedback, you have! 
+
+If this worked great for you then just drop a 'worked great' comment somewhere. 
+
+If there were problems or the instructions were too vague please let me know so I can fix it up a bit
+
+The best way to provide feedback will be through the https://github.com/camac/XPagesExtLibX/issues[Project's Issues Page]
+
+## Demonstration Video
+
+Check out this https://youtu.be/7sassOh-wkw[demonstration video on youtube] of the JDBC Provider in action
 
 ## Installation
 
-To use the NSF Document JDBC Provider, make sure you have installed the ExtLibX plugins to your Domino Designer and Domino Server
+To use the NSF Document JDBC Provider, make sure you have installed the ExtLibX plugins to your Domino Designer and Domino Server.
 
-Then make sure you have selected the `com.ibm.xsp.extlibx` library in the XSP Properties file for that application
+Then make sure you have selected the `com.ibm.xsp.extlibx` library in the XSP Properties file for that application. You will also need to select the normal Extension library, and it's relational library.
+
+Then:
+
+* Set up the JDBC Configuration Design Elements in the database that will hold the configuration
+* Configure the application so it knows where to load JDBC Configuration from (Local, Global or Both)
+* Set up your JDBC Configuration Documents in the database that you are using for configuration
 
 ### Using a Local Provider
 
@@ -21,20 +41,19 @@ xsp.jdbc.nsfdocumentprovider.local=true
 
 ### Using a Global Provider
 
-To use a Global Provider, put the following entry in your application's xsp.properties file, where <filepath> is the file path of your NSF that has the JDBC Configuration
+To use a Global Provider, put the following entry in your application's xsp.properties file, where <filepath> is the file path of your NSF that has the JDBC Configuration. If you want to use the same JDBC Configuration database for all applications on the server, then you can supply this via the server's xsp.properties file
 
 ```
 xsp.jdbc.nsfdocumentprovider.global.filepath=<filepath>
 ```
 
-
-### Setting up the Database
+### Setting up the JDBC Configuration Design Elements
 
 The JDBC Provider expects a certain convention to discover the connection information. It will search a specific view, for a JDBC Configuration document, and when it finds the document it will then expect certain field to find the configuration information.
 
-#### Form Design
+#### Configuration Document Form Design
 
-The form that holds the JDBC connection details is expected to have the following fields:
+The form that holds the JDBC Connection Configuration details is expected to have the following fields:
 
 image::images\JDBCConnectionForm.JPG[]
 
@@ -72,7 +91,7 @@ The first column should be categorised, and use the following formula:
 
 This will group all the configurations that are not server-specific under the one 'Default' Category.
 
-The second column should be *name* field. 
+The second column should be the *name* field and sorted (so it can be looked up). 
 After that you can put whatever columns you like
 
 Basically, the provider will do a lookup using Current ServerName + Connection Name.
@@ -88,3 +107,10 @@ To turn the logging on, put the following entry into the rcp
 ```
 com.ibm.xsp.extlib.relational.level=FINEST
 ```
+
+Note: The initialisation stage is probably the most important to see what is going on, and this only happens when you first fire up an application, so maybe you need to restart the server
+
+## Ideas for Improvements
+
+* Include the extra Connection Pool parameters in the Configuration Document (e.g. max connections etc)
+* Add a menu option in Domino Designer to automatically install the JDBC Configuration Elements
