@@ -3,7 +3,7 @@
 <feature
       id="org.openntf.extlibx.feature"
       label="Extended Components Library for XPages Extension Feature"
-      version="9.0.1.v00_16_SNAPSHOT"
+      version="9.0.1.v00_17_SNAPSHOT"
       provider-name="IBM">
 
    <description url="http://extlib.openntf.org">
