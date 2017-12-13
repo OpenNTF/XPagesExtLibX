@@ -1,0 +1,93 @@
+# HTML Table Minor Enhancements
+
+The core XPages `<xp:table>` control does not have support for rendering table sections such as `<thead>`, `<tfoot>` and `<tbody>`.
+Also, there is no `<th>` element available.
+
+The lack of these options is annoying when you are trying to use some stylesheets that have been designed with this table structure in mind, however you end up having to make amendments to the css, or use workarounds.
+
+The following controls / renderer allow you to produce a html table with these elements.
+
+## Using the Table Header Cell control
+
+To use a th Cell, simply use the Table Header Cell control. It is exactly like a normal `<xp:td>` control, except it will render as `<th>` instead of `<td>`
+
+```
+    <xp:tr>
+        <!-- Using the th control -->
+		<xe:th>Last Name</xe:th>
+		<xe:th>First Name</xe:th>
+	</xp:tr>
+
+```
+
+## Using Table Header, Footer and Body sections
+
+Support for <thead>, <tfoot> and <tbody> elements is provided by an extended version of the Table Renderer, this renderer's rendererType is *com.ibm.xsp.extlibx.Table*.
+
+You have 2 choices on how to enable the table renderer
+
+* Make the renderer default for all tables in the application
+* Enable the renderer only for specific tables
+
+### Setting Table Renderer for All Tables
+
+You can set the renderer Type for all Tables in your application by including the following in your theme configuration file:
+
+```
+	<control>
+		<name>HtmlTable</name>
+		<property>
+			<name>rendererType</name>
+			<value>com.ibm.xsp.extlibx.Table</value>
+		</property>
+	</control>
+```
+
+### Setting RendererType for specific tables
+
+To enable the renderer for specific tables, just set the rendererType to *com.ibm.xsp.extlibx.Table*
+
+```
+	<xp:table rendererType="com.ibm.xsp.extlibx.Table">
+```
+
+### How to specify thead, tfoot and tbody
+
+The thead and tfoot elements can be used by providing a facet named thead or tfoot
+The tbody element will be rendered by default and contain all the child elements of the table
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:table rendererType="com.ibm.xsp.extlibx.Table">
+	    <!-- thead and tfoot are specified using facets -->
+		<xp:this.facets>
+		
+			<xp:tr xp:key="thead">
+				<xe:th>Header 1</xe:th>
+				<xe:th>Header 2</xe:th>
+			</xp:tr>
+			
+			<xp:tr xp:key="tfoot">
+				<xp:td>Footer 1</xp:td>
+				<xp:td>Footer 2</xp:td>
+			</xp:tr>
+
+		</xp:this.facets>
+		
+		<!-- all the child controls will be automatically renderer within a tbody element -->
+		
+		<xp:tr>
+			<xp:td>R1C1</xp:td>
+			<xp:td>R1C2</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>R2C1</xp:td>
+			<xp:td>R2C2</xp:td>
+		</xp:tr>
+	</xp:table>
+
+</xp:view>
+```
+
