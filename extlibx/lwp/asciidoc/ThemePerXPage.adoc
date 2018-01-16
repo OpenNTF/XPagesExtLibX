@@ -1,0 +1,34 @@
+# Specifying Themes for Individual XPages
+
+The ExtLibX library provides a modified FacesContext which enables you to specify a specific theme for a specific XPage.
+
+## Usage Instructions
+
+Obviously a first step is to ensure you have installed the ExtLibX Library
+
+Then add the `xsp.theme` property for each XPage that you would like to configure a specific theme for:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.properties>
+		<xp:parameter name="xsp.theme" value="oneuiv2"></xp:parameter>
+	</xp:this.properties>
+		
+</xp:view>
+```
+
+## How does it work?
+
+The ExtLibX library registers a new FacesContextFactory, which means that it will be responsible for creating the FacesContext object.
+
+It creates a modified FacesContext object which is an extension of the normal FacesContext. This modified FacesContext will check the XPage to see if any theme has been specified for it specifically.
+
+### Disabling the Modified FacesContext
+
+If you find a reason that you need to disable the use of the modified FacesContext, you can do so by setting the following application property (in `xsp.properties`) 
+
+```
+xsp.extlibx.facescontextfactory.enabled=false
+```

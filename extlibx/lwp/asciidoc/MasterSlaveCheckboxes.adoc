@@ -1,0 +1,15 @@
+= Master/Slave Checkboxes
+
+The Master/Slave checkbox controls are used to provide a user-friendly (and developer friendly) way of acheiving bulk selection from a list of records.
+
+* Select All / Deselect All
+* Select a checkbox by clicking on a parent element
+* Style a parent element of the checkbox based on checkbox state
+
+We can demonstrate these features with some simple examples of selecting some ingredients for a burger.
+
+== Basic Operation
+
+== Styling a Parent Element
+
+== Using a 'row click' style selection

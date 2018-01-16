@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: XPages Responsive Bootstrap4 Theme
 Bundle-SymbolicName: com.ibm.xsp.extlibx.theme.bootstrap4;singleton:=true
-Bundle-Version: 9.0.1.v00_16_qualifier
+Bundle-Version: 9.0.1.v00_17_qualifier
 Bundle-Vendor: IBM
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .

@@ -1,39 +1,34 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-<artifactId>com.ibm.xsp.extlibx.parent</artifactId>
-<packaging>pom</packaging>
-<version>9.0.1.v00_16-SNAPSHOT</version>
-<groupId>com.ibm.xsp.extlibx</groupId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>com.ibm.xsp.extlibx.parent</artifactId>
+	<packaging>pom</packaging>
+	<version>9.0.1.v00_17-SNAPSHOT</version>
+	<groupId>com.ibm.xsp.extlibx</groupId>
 
-<modules>
-<module>/openntf/runtime/eclipse/plugins</module>
-<module>/openntf/runtime/eclipse/features</module>
-<module>/openntf/runtime/updatesite/com.ibm.xsp.extlibx.updatesite</module>
-</modules>
+	<modules>
+		<module>/openntf/runtime/eclipse/plugins</module>
+		<module>/openntf/runtime/eclipse/features</module>
+		<module>/openntf/runtime/updatesite/com.ibm.xsp.extlibx.updatesite</module>
+	</modules>
 
-<properties>
+	<properties>
 		<tycho-version>0.19.0</tycho-version>
 		<compiler>1.6</compiler>
-		
-		<!--<maven.build.timestamp.format>'v00_10_SNAPSHOT.'yyyyMMdd-HHmm</maven.build.timestamp.format>
-		<build.qualifier>${maven.build.timestamp}</build.qualifier>
-		-->
-</properties>
+		<notes-platform>file:///V:\Projects\DominoUpdateSite</notes-platform>
 
-<repositories>
-<repository>
-<id>notes</id>
-<layout>p2</layout>
-<url>${notes-platform}</url>
-</repository>
-</repositories>
+		<!--<maven.build.timestamp.format>'v00_10_SNAPSHOT.'yyyyMMdd-HHmm</maven.build.timestamp.format> <build.qualifier>${maven.build.timestamp}</build.qualifier> -->
+	</properties>
 
-<profiles>
-		<!--
-			Look for the used-by-convention "notes-platform" property and, if
-			present, override the hard-coded Update Site path.
-		-->
+	<repositories>
+		<repository>
+			<id>notes</id>
+			<layout>p2</layout>
+			<url>${notes-platform}</url>
+		</repository>
+	</repositories>
+
+	<profiles>
+		<!-- Look for the used-by-convention "notes-platform" property and, if present, override the hard-coded Update Site path. -->
 		<profile>
 			<activation>
 				<property>
@@ -44,13 +39,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<repository>
 					<id>notes</id>
 					<layout>p2</layout>
-				<url>${notes-platform}</url>
+					<url>${notes-platform}</url>
 				</repository>
 			</repositories>
 		</profile>
-</profiles>
+	</profiles>
 
-<build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -58,7 +53,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<version>3.1</version>
 				<configuration>
 					<source>1.6</source>
-					<target>1.6</target>			
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -67,7 +62,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
-				
+
 			</plugin>
 			<plugin>
 				<!-- enable tycho packaging extension -->
@@ -75,18 +70,18 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<artifactId>tycho-packaging-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<strictVersions>false</strictVersions>		
+					<strictVersions>false</strictVersions>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-compiler-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
 					<source>${compiler}</source>
-					<target>${compiler}</target>				
-					<compilerArgument>-err:-forbidden</compilerArgument>	   
+					<target>${compiler}</target>
+					<compilerArgument>-err:-forbidden</compilerArgument>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -94,18 +89,18 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-				
-			<dependency-resolution>
-			<optionalDependencies>ignore</optionalDependencies>
-			  <extraRequirements>
-				<requirement>
-				  <type>eclipse-plugin</type>
-				  <id>com.ibm.notes.java.api.win32.linux</id>
-				  <versionRange>[9.0.1,9.0.2)</versionRange>
-				</requirement>
-			  </extraRequirements>
-			</dependency-resolution>
-		
+
+					<dependency-resolution>
+						<optionalDependencies>ignore</optionalDependencies>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>com.ibm.notes.java.api.win32.linux</id>
+								<versionRange>[9.0.1,9.0.2)</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+
 					<filters>
 						<!-- work around Equinox bug 348045 -->
 						<filter>
@@ -155,14 +150,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 						<repository>
 							<url>http://download.eclipse.org/releases/juno/</url>
 							<layout>p2</layout>
-							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" 
-								(for joint repositories; default) -->
+							<!-- supported layouts are "p2-metadata", "p2-artifacts", and "p2" (for joint repositories; default) -->
 						</repository>
 					</source>
 
 					<!-- starting from here all configuration parameters are optional -->
-					<!-- they are only shown here with default values for documentation 
-						purpose -->
+					<!-- they are only shown here with default values for documentation purpose -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -173,14 +166,53 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<includeAllDependencies>true</includeAllDependencies>
 				</configuration>
 			</plugin>
-			
+
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>1.5.6</version>
+				<dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>1.5.0-alpha.16</version>
+                    </dependency>
+                </dependencies>
+
+				<executions>
+					<execution>
+						<id>output-html</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<sourceDirectory>${basedir}/asciidoc</sourceDirectory>
+							<backend>html</backend>
+						</configuration>
+					</execution>
+					<execution>
+						<id>output-pdf</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<sourceDirectory>${basedir}/asciidoc</sourceDirectory>
+							<outputDirectory>${project.build.directory}/generated-pdfs</outputDirectory>
+							<backend>pdf</backend>
+						</configuration>
+					</execution>
+					
+				</executions>
+			</plugin>
+
 		</plugins>
 
 
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -201,6 +233,19 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 										</versionRange>
 										<goals>
 											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.asciidoctor</groupId>
+										<artifactId>asciidoctor-maven-plugin</artifactId>
+										<versionRange>[1.5.6,)</versionRange>
+										<goals>
+											<goal>process-asciidoc</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+	
+	<lifecycle>
+		<phase-listener>com.ibm.xsp.extlibx.relational.jdbc.JdbcProviderPhaseListener</phase-listener>
+	</lifecycle>
+	
+</faces-config>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view xmlns="http://www.lotus.com/dxl" name="Administration\JdbcConnections" alias="JdbcConnections" showinmenu="false" publicaccess="false" unreadmarks="none" onopengoto="lastopened" onrefresh="refresh" headers="simple" opencollapsed="true" showresponsehierarchy="false" showmargin="true" shrinkrows="true" extendlastcolumn="false" showhierarchies="false" unreadcolor="black" rowlinecount="3" headerlinecount="1" rowspacing="1" bgcolor="white" altrowcolor="#efefef" totalscolor="gray" headerbgcolor="#e1e1e1" boldunreadrows="false" evaluateactions="false" allownewdocuments="false" allowcustomizations="true" hidemarginborder="false" marginwidth="0px" marginbgcolor="black" uniquekeys="false">
+  <code event="selection">
+    <formula>SELECT ((Form = "JdbcConnection"))</formula>
+  </code>
+  <actionbar borderstyle="none" bgcolor="#639bb7" bordercolor="black">
+    <actionbarstyle height="25px" repeat="hrepeat">
+      <imageref name="ActionBarBG"/>
+    </actionbarstyle>
+    <actionbuttonstyle heighttype="fixed" height="21" margintype="fixed" margin="1" bgcolor="none"/>
+    <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20" color="system"/>
+    <border/>
+    <action title="New Connection">
+      <imageref name="add.gif"/>
+      <code event="click">
+        <formula>@Command([Compose];"JdbcConnection")</formula>
+      </code>
+    </action>
+  </actionbar>
+  <column sort="ascending" hidedetailrows="false" itemname="$1" width="7.2500" resizable="true" separatemultiplevalues="true" sortnoaccent="false" sortnocase="true" showaslinks="false" categorized="true" twisties="true">
+    <font size="8pt" style="bold" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    <columnheader title="Server">
+      <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    </columnheader>
+    <code event="value">
+      <formula>@If(@Text(server)="";"Default";server)</formula>
+    </code>
+  </column>
+  <column sort="ascending" hidedetailrows="false" itemname="Name" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    <columnheader title="Name">
+      <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    </columnheader>
+    <numberformat legacy="true" format="general" varying="true" punctuated="false" parens="false" percent="false" bytes="false"/>
+  </column>
+  <column hidedetailrows="false" itemname="url" width="24.8750" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    <columnheader title="Url">
+      <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    </columnheader>
+    <numberformat legacy="true" format="general" varying="true" punctuated="false" parens="false" percent="false" bytes="false"/>
+  </column>
+  <column hidedetailrows="false" itemname="driver" width="40.3750" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    <columnheader title="Driver">
+      <font size="8pt" name="Arial" pitch="variable" truetype="true" familyid="20"/>
+    </columnheader>
+  </column>
+</view>

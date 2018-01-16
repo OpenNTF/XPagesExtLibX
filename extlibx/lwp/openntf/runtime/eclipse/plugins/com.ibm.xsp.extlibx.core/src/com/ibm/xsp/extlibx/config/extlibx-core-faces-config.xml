@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+  <factory>
+    <faces-context-factory>com.ibm.xsp.extlibx.application.ExtlibXFacesContextFactory</faces-context-factory>
+  </factory>  
+
+</faces-config>
